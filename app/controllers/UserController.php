@@ -21,7 +21,7 @@ class UserController {
                 echo "Erreur lors de l'inscription";
             }
         }
-        require 'app/views/register.php';
+        require_once __DIR__ . '/../views/register.php';
     }
 
     public function login() {
@@ -38,7 +38,7 @@ class UserController {
                 echo "Email ou mot de passe incorrect";
             }            
         }
-        require 'app/views/login.php';
+        require_once __DIR__ . '/../views/login.php';
     }
 }
 ?>
