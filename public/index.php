@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 // Inclusion des contrôleurs
 require_once '../app/controllers/SoinController.php';
 require_once '../app/controllers/ReservationController.php';
@@ -11,7 +13,6 @@ if (isset($_GET['page'])) {
     $page = 'soins'; // Par défaut, on affiche les soins
 }
 
-// On inclut le contrôleur correspondant à la page demandée
 switch ($page) {
     case 'soins':
         $controller = new SoinController();
@@ -20,20 +21,21 @@ switch ($page) {
     
     case 'reservations':
         $controller = new ReservationController();
-        $controller->reserver(); // Appel direct de la méthode reserver()
+        $controller->reserver();
         break;
 
     case 'login':
-        require '../app/views/login.php';
+        $controller = new UserController();
+        $controller->login();
         break;
 
     case 'register':
-        require '../app/views/register.php';
+        $controller = new UserController();
+        $controller->register();
         break;
 
     default:
         echo "Page introuvable";
         break;
 }
-
 ?>

@@ -26,7 +26,7 @@ class ReservationController {
                 echo "Données manquantes.";
             }
         }
-        require 'app/views/reservation.php';
+        require_once __DIR__ . '/../views/reservation.php';
     }
     
 }

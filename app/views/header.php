@@ -11,10 +11,10 @@
         <h1>Bienvenue sur SpaVita</h1>
         <nav>
             <ul>
-                <li><a href="/soins">Nos Soins</a></li>
-                <li><a href="/reservations">Réservations</a></li>
-                <li><a href="/login">Se connecter</a></li>
-                <li><a href="/register">S'inscrire</a></li>
+                <li><a href="/SpaVita-equipe5/public/?page=soins">Nos Soins</a></li>
+                <li><a href="/SpaVita-equipe5/public/?page=reservations">Réservations</a></li>
+                <li><a href="/SpaVita-equipe5/public/?page=login">Se connecter</a></li>
+                <li><a href="/SpaVita-equipe5/public/?page=register">S'inscrire</a></li>
             </ul>
         </nav>
     </header>

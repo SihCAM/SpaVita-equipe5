@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/../models/Soin.php';
+require_once __DIR__ . '/../views/soins.php';
 
 class SoinController {
     private $model;

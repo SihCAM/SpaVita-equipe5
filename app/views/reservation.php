@@ -1,6 +1,4 @@
 <?php
-// Démarrer la session pour récupérer l'utilisateur connecté
-session_start();
 
 // Vérifier si l'utilisateur est connecté
 if (!isset($_SESSION['user'])) {
