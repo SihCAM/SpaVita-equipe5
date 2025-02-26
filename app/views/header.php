@@ -11,7 +11,7 @@
         <h1>Bienvenue sur SpaVita</h1>
         <nav>
             <ul>
-            <li><a href="/SpaVita-equipe5/public/?page=soins">Accueil</a></li>
+                <li><a href="/SpaVita-equipe5/public/?page=home">Accueil</a></li>
                 <li><a href="/SpaVita-equipe5/public/?page=soins">Nos Soins</a></li>
                 <li><a href="/SpaVita-equipe5/public/?page=reservations">Réservations</a></li>
                 <li><a href="/SpaVita-equipe5/public/?page=login">Se connecter</a></li>

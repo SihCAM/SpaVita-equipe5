@@ -10,9 +10,19 @@ class User {
 
     // Insérer un nouvel utilisateur
     public function createUser($name, $email, $password) {
+        // Vérifier si l'email existe déjà
+        $stmt = $this->pdo->prepare("SELECT COUNT(*) FROM users WHERE email = ?");
+        $stmt->execute([$email]);
+        if ($stmt->fetchColumn() > 0) {
+            echo "Erreur : Cet email est déjà utilisé.";
+            return false;
+        }
+    
+        // Insérer l'utilisateur si l'email n'existe pas
         $stmt = $this->pdo->prepare("INSERT INTO users (name, email, password, role) VALUES (?, ?, ?, 'client')");
         return $stmt->execute([$name, $email, $password]);
     }
+    
 
     // Récupérer un utilisateur par email
     public function getUserByEmail($email) {

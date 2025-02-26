@@ -1,4 +1,4 @@
-<form method="POST" action="/user/register">
+<form method="POST" action="/SpaVita-equipe5/public/?page=register">
     <label for="name">Nom :</label>
     <input type="text" name="name" required>
     <label for="email">Email :</label>

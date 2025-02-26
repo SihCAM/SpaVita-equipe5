@@ -26,7 +26,7 @@ class UserController {
             }
 
             if ($this->model->createUser($name, $email, $password)) {
-                header('Location: /login');
+                header('Location: /SpaVita-equipe5/public/index.php?page=login');
                 exit;
             } else {
                 echo "Erreur lors de l'inscription.";
@@ -41,20 +41,20 @@ class UserController {
                 echo "Tous les champs sont obligatoires.";
                 exit;
             }
-
+    
             $email = $_POST['email'];
             $password = $_POST['password'];
             $user = $this->model->getUserByEmail($email);
-
+    
             if ($user && password_verify($password, $user['password'])) {
                 $_SESSION['user'] = $user;
-                header('Location: /home'); // Redirection vers l'accueil après connexion
+                header('Location: /SpaVita-equipe5/public/?page=home'); // Redirection vers la page d'accueil après connexion
                 exit;
             } else {
                 echo "Email ou mot de passe incorrect.";
-            }
+            }            
         }
-        require_once __DIR__ . '/../views/login.php';
+        require_once __DIR__ . '/../views/login.php'; // Affichage du formulaire de connexion
     }
 }
 ?>
