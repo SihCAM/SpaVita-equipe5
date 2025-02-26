@@ -10,13 +10,17 @@ require_once '../app/controllers/UserController.php';
 if (isset($_GET['page'])) {
     $page = $_GET['page'];
 } else {
-    $page = 'soins'; // Par défaut, on affiche les soins
+    $page = 'home'; // Par défaut, on affiche la page d'accueil
 }
 
 switch ($page) {
+    case 'home':
+        require '../app/views/home.php';
+        break;
+
     case 'soins':
         $controller = new SoinController();
-        $controller->index();
+        $controller->soins();
         break;
     
     case 'reservations':

@@ -9,8 +9,8 @@ class SoinController {
         $this->model = new Soin();
     }
 
-    public function index() {
-        $soins = $this->model->getAllSoins();
+    public function soins() {
+        $soins = $this->model->getAllSoins(); // Rècupere tous les soins depuis le modèle
         require_once __DIR__ . '/../views/soins.php'; // Inclut la vue soins.php avec le chemin absolu
     }
 }
