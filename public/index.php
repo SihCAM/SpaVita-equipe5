@@ -38,6 +38,11 @@ switch ($page) {
         $controller->register();
         break;
 
+    case 'logout':
+        $controller = new UserController();
+        $controller->logout();
+        break;
+
     default:
         echo "Page introuvable";
         break;
