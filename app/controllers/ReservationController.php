@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/../models/Reservation.php';
+require_once __DIR__ . '/../models/Soin.php';
 
 class ReservationController {
     private $model;
@@ -36,6 +37,10 @@ class ReservationController {
             } else {
                 echo "Données manquantes.";
             }
+        } else {
+            // En cas de requête GET, on prépare la liste des soins pour le formulaire
+            $soinModel = new Soin();
+            $soins = $soinModel->getAllSoins();
         }
 
         require_once __DIR__ . '/../views/reservation.php';
