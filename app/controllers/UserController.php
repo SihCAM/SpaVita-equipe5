@@ -56,5 +56,14 @@ class UserController {
         }
         require_once __DIR__ . '/../views/login.php'; // Affichage du formulaire de connexion
     }
+
+    public function logout() {
+        // Détruire la session pour déconnecter l'utilisateur
+        session_start();
+        session_unset();
+        session_destroy();
+        header('Location: /SpaVita-equipe5/public/?page=home'); // Redirection vers la page d'accueil après la déconnexion
+        exit;
+    }
 }
 ?>
