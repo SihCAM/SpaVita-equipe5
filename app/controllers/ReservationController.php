@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/../models/Reservation.php';
-require_once __DIR__ . '/../models/Soin.php';
+require_once __DIR__ . '/../models/Soin.php'; // Pour récupérer la liste des soins
 
 class ReservationController {
     private $model;
@@ -16,20 +16,21 @@ class ReservationController {
             exit;
         }
 
+        // Si le formulaire a été soumis
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if (isset($_POST['soin_id'], $_POST['date'])) {
-                $user_id = $_SESSION['user']['id']; // Récupération de l'ID utilisateur depuis la session
+                $user_id = $_SESSION['user']['id'];
                 $soin_id = intval($_POST['soin_id']);
                 $date = htmlspecialchars($_POST['date']);
 
-                // Vérifier que la date est valide et future
+                // Vérifier que la date est valide et dans le futur
                 if (strtotime($date) < time()) {
-                    echo "La date choisie est invalide.";
+                    echo "La date choisie est invalide. Veuillez sélectionner un créneau futur.";
                     exit;
                 }
 
                 if ($this->model->ajouterReservation($user_id, $soin_id, $date)) {
-                    header('Location: /reservations'); // Redirection après succès
+                    header('Location: /reservations'); // Redirection en cas de succès
                     exit;
                 } else {
                     echo "Erreur lors de la réservation.";
@@ -38,7 +39,7 @@ class ReservationController {
                 echo "Données manquantes.";
             }
         } else {
-            // En cas de requête GET, on prépare la liste des soins pour le formulaire
+            // Pour une requête GET, récupérer la liste des soins pour alimenter le formulaire
             $soinModel = new Soin();
             $soins = $soinModel->getAllSoins();
         }

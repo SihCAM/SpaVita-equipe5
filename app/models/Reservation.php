@@ -1,5 +1,5 @@
 <?php
-require_once '../config/config.php';
+require_once '../config/config.php'; // Assure-toi que ce fichier contient la classe Database
 
 class Reservation {
     private $pdo;
