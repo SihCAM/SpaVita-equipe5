@@ -1,5 +1,3 @@
-Je vais créer un README restructuré et amélioré pour votre projet GitHub, en me basant sur le cahier des charges que vous avez partagé.
-
 # SpaVita - Plateforme de Réservation en Ligne pour Spa
 
 ## 📖 Présentation du projet
