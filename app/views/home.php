@@ -79,7 +79,7 @@ include '../app/views/header.php';
             <span class="price">A partir de 59€</span>
         </div>
         <div class="service-item">
-            <img src="assets/images/meilleur-soin-visage.svg" alt="Soins du visage">
+            <img src="assets/images/meilleur-soin-visage.png" alt="Soins du visage">
             <h3>Soins du visage Eclat</h3>
             <p>Un soin personnaliszé pour revitaliser votre peau et retrouver un teint lumineux</p>
             <span class="price">A partir de 49€</span>
