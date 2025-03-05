@@ -15,11 +15,17 @@ if ($hour >= 18) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SpaVita</title>
-    <link rel="stylesheet" href="/public/assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/custom.css">   
 </head>
 <body>
     <header>
-        <h1>Bienvenue sur SpaVita</h1>
+    <div>
+        <a href="/SpaVita-equipe5/public/?page=home">
+            <img src="assets/images/logo.png" alt="Logo SpaVita" class="logo">
+        </a>
+    </div>
+        
         <nav>
             <ul>
                 <li><a href="/SpaVita-equipe5/public/?page=home">Accueil</a></li>
