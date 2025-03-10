@@ -98,16 +98,54 @@ include '../app/views/header.php';
 
 
 <!--Section Témoignages -->
-<section class="temoignages-List">
+<section class="temoignages">
     <h2>Ce que disent nos clients</h2>
-    <div class="temoignage">
-        <p>"Un lieu magique pour se détendre et oublier le stress du quotidien. Une équipe aux petits soins ! "</p>
-        <strong> -Sphie L.</strong>
-    </div>
-    <div class="temoignage">
-        <p>"Le meilleur massage que j'ai jamais eu ! Je recommande fortement SpaVita."</p>
-        <strong> -Marc D.</strong>
-    </div>
+    <div class="slider-container">
+        <button class="prev"><i class="fas fa-chevron-left"></i></button>
+        <div class="slider">
+            <div class="temoignage-card">
+                <i class="fas fa-comment-dots"></i>
+                <p>"Un lieu magique pour se détendre et oublier le stress du quotidien. Une équipe aux petits soins ! "</p>
+                <strong>- Sophie L.</strong>
+                <span class="guillemets">"</span>
+            </div>
+            <div class="temoignage-card">
+                <i class="fas fa-comment-dots"></i>
+                <p>"Un lieu magique pour se détendre et oublier le stress du quotidien. Une équipe aux petits soins ! "</p>
+                <strong>- Franc B.</strong>
+                <span class="guillemets">“</span>
+            </div>
+            <div class="temoignage-card">
+                <i class="fas fa-comment-dots"></i>
+                <p>"Dès les premiers instants, j'ai été séduite par la sérénité du lieu. Un cadre élégant, un fond sonore, des huiles essentielles délicatement diffusées... Chaque soin est réalisé avec une attention particulière, procurant une détente profonde. Une parenhèse enchantée que ne renouvellerai avec plaisir."</p>
+                <strong>- Marc D.</strong>
+                <span class="guillemets">“</span>
+            </div>
+            <div class="temoignage-card">
+                <i class="fas fa-comment-dots"></i>
+                <p>"Une expérience de bien-être unique, un cadre magnifique et des soins d'une grande qualité."</p>
+                <strong>- Emma R.</strong>
+                <span class="guillemets">“</span>
+            </div>
+            <div class="temoignage-card">
+                <i class="fas fa-comment-dots"></i>
+                <p>"Un moment de détente inoubliable, je reviendrai sans hésiter !"</p>
+                <strong>- Thomas B.</strong>
+                <span class="guillemets">“</span>
+            </div>
+            <div class="temoignage-card">
+                <p>"Le meilleur massage que j'ai jamais eu ! Je recommande fortement SpaVita."</p>
+                <strong> -Marc D.</strong>
+                <span class="guillemets">“</span>
+            </div>
+            <div class="temoignage-card">
+                <p>"Cette adresse, nichée au pied des montagnes, est unique en son genre. les cabines éclairées à la bougie, l'atmosphère apaisante et les délicates senteurs nous transportent instanténément ailleurs... le chaos de la ville semble loiun , très loin. Chaque protocole est une invitation à une expérience envoûtante et hors du temps."</p>
+                <strong> -Elise C.</strong>
+                <span class="guillemets">“</span>
+            </div>
+        </div>
+        <button class="next"><i class="fas fa-chevron-right"></i></button>
+    </div> 
 </section>
 
 <!--Section Reservation-->
