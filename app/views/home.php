@@ -60,9 +60,6 @@ include '../app/views/header.php';
         <p>
             Nos cabines de soins vous acceuillent pour des **rituels relaxants**, avec des produits inspirés des rihesses alpines. Que ce soit pour un massage aux huiles essentielles, un soin de beauté ou une pause détente dans notre solarium, chaque instant à SpaVita est une invitation à l'évasion.
         </p>
-        
-        <!--propose une expérience unique avec des soins relaxants, des massages thérapeutiques et des installations haut de gamme. <br> Profitez de notre **-->
-       
     </div>
 </div>
 </section>
@@ -99,60 +96,94 @@ include '../app/views/header.php';
 
 <!--Section Témoignages -->
 <section class="temoignages">
-    <h2>Ce que disent nos clients</h2>
-    <div class="slider-container">
+    <div class="container"></div>
+    <div class="section-header">
+        <h2>Ce que disent nos clients</h2>
+        <p>Des expériences inoubliables partagées par nos visiteurs</p>
+    </div>
+
+    <div class="temoignage-slider">
         <button class="prev"><i class="fas fa-chevron-left"></i></button>
-        <div class="slider">
-            <div class="temoignage-card">
-                <i class="fas fa-comment-dots"></i>
-                <p>"Un lieu magique pour se détendre et oublier le stress du quotidien. Une équipe aux petits soins ! "</p>
-                <strong>- Sophie L.</strong>
-                <span class="guillemets">"</span>
+        <div class="temoignage-track">
+            <div class="temoignage-active"> 
+                <div class="temoignage">
+                <div class="temoignage-content">
+                    <p>"Un lieu magique pour se détendre et oublier le stress du quotidien. Une équipe aux petits soins !"</p>
+                    <div class="temoignage-auteur">- Sophie L.</div>
+                </div>
+                </div>
             </div>
-            <div class="temoignage-card">
-                <i class="fas fa-comment-dots"></i>
-                <p>"Un lieu magique pour se détendre et oublier le stress du quotidien. Une équipe aux petits soins ! "</p>
-                <strong>- Franc B.</strong>
-                <span class="guillemets">“</span>
-            </div>
-            <div class="temoignage-card">
-                <i class="fas fa-comment-dots"></i>
+
+            <div class="temoignage">
+            <div class="temoignage-content">
                 <p>"Dès les premiers instants, j'ai été séduite par la sérénité du lieu. Un cadre élégant, un fond sonore, des huiles essentielles délicatement diffusées... Chaque soin est réalisé avec une attention particulière, procurant une détente profonde. Une parenhèse enchantée que ne renouvellerai avec plaisir."</p>
-                <strong>- Marc D.</strong>
-                <span class="guillemets">“</span>
+                <div class="temoignage-auteur">- Elise C.</div>
             </div>
-            <div class="temoignage-card">
-                <i class="fas fa-comment-dots"></i>
-                <p>"Une expérience de bien-être unique, un cadre magnifique et des soins d'une grande qualité."</p>
-                <strong>- Emma R.</strong>
-                <span class="guillemets">“</span>
             </div>
-            <div class="temoignage-card">
-                <i class="fas fa-comment-dots"></i>
-                <p>"Un moment de détente inoubliable, je reviendrai sans hésiter !"</p>
-                <strong>- Thomas B.</strong>
-                <span class="guillemets">“</span>
+
+            <div class="temoignage">
+                <div class="temoignage-content">
+                    <p>"Le meilleur massage que j'ai jamais eu ! Je recommande fortement SpaVita."</p>
+                    <div class="temoignage-auteur">- Marc D.</div>
+                </div>
             </div>
-            <div class="temoignage-card">
-                <p>"Le meilleur massage que j'ai jamais eu ! Je recommande fortement SpaVita."</p>
-                <strong> -Marc D.</strong>
-                <span class="guillemets">“</span>
+
+            <div class="temoignage">
+                <div class="temoignage-content">
+                    <p>"Un moment de détente inoubliable, je reviendrai sans hésiter !"</p>
+                    <div class="temoignage-auteur">- Thomas B.</div>
+                </div>
             </div>
-            <div class="temoignage-card">
-                <p>"Cette adresse, nichée au pied des montagnes, est unique en son genre. les cabines éclairées à la bougie, l'atmosphère apaisante et les délicates senteurs nous transportent instanténément ailleurs... le chaos de la ville semble loiun , très loin. Chaque protocole est une invitation à une expérience envoûtante et hors du temps."</p>
-                <strong> -Elise C.</strong>
-                <span class="guillemets">“</span>
-            </div>
-        </div>
-        <button class="next"><i class="fas fa-chevron-right"></i></button>
-    </div> 
+
+         </div>
+    </div>
+
+    <button class="next"><i class="fas fa-chevron-right"></i></button>
 </section>
 
-<!--Section Reservation-->
-<section class="reservation">
-    <h2>Prenez soin de vous</h2>
-    <p>Réservez dès maintenant votre moment de détente</p>
-    <a href="index.php ?page=reservations" class="btn"> Réserver maintenant</a>    
+
+<!--Section Contact-->
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="section-header">
+            <h2>Contactez-nous</h2>
+            <p>Pour toute question ou pour réserver, n'hesitez pas à nous contacter.</p>
+        </div>
+    <div class="contact-container">
+        <div class="contact-info">
+            <div class="info-item">
+                <!--<i class="fas fa-map"></i>-->
+                <h3>Adresse</h3>
+                <p> 15 avenue du lac <br> 74000 Annecy</p>
+            </div>
+            <div class="info-item">
+                <h3>Horaires</h3>
+                <p>Lundi - Vendredi : 10h00 -20h00<br>Samedi: 9h00 - 21h00<br>Dimanche: 10h00 - 21h00</p>
+            </div>
+            <div class="info-item">
+                <h3>Contact</h3>
+                <p> Téléphone: 04 23 45 67 89<br> Email: contact@spavita.fr</p>
+            </div>
+        </div>
+        <div class="contact-form">
+            <form action="/contact" method="POST">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Votre email" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phone" name="phone" placeholder="Votre téléphone">
+                </div>
+                <div class="form-group">
+                    <textarea name="message" id="message" placeholder="Votre message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+            </form>
+        </div>
+    </div>
+</div>
 </section>
 
 <?php include '../app/views/footer.php'; ?>

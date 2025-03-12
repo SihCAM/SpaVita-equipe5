@@ -336,78 +336,60 @@ nav ul li a:hover {
     margin-top:30px;
 }
 
+
 /*SECTION TEMOIGNAGES*/
 .temoignages {
     text-align: center;
     padding: 80px 5%;
-    background: url('../images/background-temoignages.png')  no-repeat center / cover;
-    background-attachment: fixed; /*Effet parallaxe */
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--white-color);
     position: relative;
+}
+
+.temoignages .setion-header h2::after {
+    background-color: var(--white-color);
+}
+
+.temoignage-container {
+    display:grid;
+    grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.temoignage{
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius);
+    padding: 2rem;
+    transition: var(--transition);
+}
+
+.temoignage:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-5px);
+}
+
+.temoignage-content p {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.temoignage-auteur {
+    text-align: right;
+    font-weight: 500;
+    color: var(--secondary-color);
 }
 
 /*Titre*/
 .temoignages h2 {
     font-size: 36px;
     font-weight: bold;
-    margin-bottom: 30px;
-}
-
-/*Slider*/
-.slider-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-.slider {
-    display: flex;
-    overflow-x: auto; /*Ajout pour faire le scroll horizontal */
-    width: 80%;
-    scroll-behavior: smooth; /*Ajout pour faire le scroll fluide */
-}
-/*Cartes temoignages*/
-.temoignage-card {
-    min-width: 320px;
-    max-width: 320px;
-    background: rgba(255, 255, 255, 0.95);
-    color:#333;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    position: relative;
-    opacity: 1;
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-}
-
-.guillemets {
-    font-size: 80px;
-    font-weight: bold;
-    position: absolute;
-    top: -20px;
-    left: 15px;
-    color: #5E503F;
-}
-
-.temoignage-card i {
-    font-size: 40px;
-    color: #5E503F;
     margin-bottom: 10px;
 }
-
-.temoignage-card p {
-    font-size: 16px;
-    font-style: italic;
-    margin-bottom: 20px;
-}
-
-/*Nom du client*/
-.temoignage-card strong {
+.temoignages p {
     font-size: 18px;
-    font-weight: bold;
+    margin-bottom: 40px;
 }
+
 
 /*Flèches de navigation*/
 .prev, .next {
@@ -434,4 +416,56 @@ nav ul li a:hover {
 
 .prev:hover, .next:hover {
     color: #5A4231;
+}
+
+/*SECTION CONTACT*/
+.contact {
+    padding: 2rem 2rem;
+   background-color: var(--white-color);
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 1rem 1rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+   /* gap: 1rem;*/
+    background-color: var(--white-color);
+}
+
+.info-item h3 {
+    color: var(--primary-color);
+}
+
+.contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: var(--radius);
+    font-family: var(font-body);
+    transition: var(--transition)
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
 }

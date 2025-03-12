@@ -2,8 +2,8 @@
 class Database {
     private static $host = 'localhost';
     private static $dbname = 'spavita'; // à adapter (ma bdd est nommée comem ceci)
-    private static $user = 'root';  // à adapter
-    private static $pass = '';      // ) adapter
+    private static $user = 'root';  
+    private static $pass = '';      
     private static $pdo = null;
 
     public static function connect() {
