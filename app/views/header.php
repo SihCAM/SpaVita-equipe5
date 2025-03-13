@@ -36,15 +36,15 @@ if ($hour >= 18) {
         
         <nav>
             <ul>
-                <li><a href="/SpaVita-equipe5/public/?page=home">Accueil</a></li>
-                <li><a href="/SpaVita-equipe5/public/?page=soins">Nos Soins</a></li>
-                <li><a href="/SpaVita-equipe5/public/?page=reservations">Réservations</a></li>
+                <li><a href="index.php?page=home">Accueil</a></li>
+                <li><a href="index.php?page=soins">Nos Soins</a></li>
+                <li><a href="index.php?page=reservations">Réservations</a></li>
             <?php if (isset($_SESSION['user'])): ?>
                 <li> <?= $greeting ?>, <?= htmlspecialchars($_SESSION['user']['name']) ?> </li>
-                <li><a href="/SpaVita-equipe5/public/?page=logout">Se déconnecter</a></li>
+                <li><a href="index.php?page=logout">Se déconnecter</a></li>
             <?php else: ?>
-                <li><a href="/SpaVita-equipe5/public/?page=login">Se connecter</a></li>
-                <li><a href="/SpaVita-equipe5/public/?page=register">S'inscrire</a></li>
+                <li><a href="index.php?page=login">Se connecter</a></li>
+                <li><a href="index.php?page=register">S'inscrire</a></li>
             <?php endif; ?>
             </ul>
         </nav>
