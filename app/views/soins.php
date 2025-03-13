@@ -28,6 +28,7 @@ require_once 'header.php';
     <?php else: ?>
         <div class="soins-grid">
         <?php foreach ($soins as $soin): ?> 
+            <section id="<?=strtolower(str_replace(' ', '-', $soin['nom'])) ?>" class="soin-section">
                 <div class="soin-card">
                     <div class="soin-card-img">
                         <img src="SpaVita-equipe5/public/assets/images/<?= !empty($soin['image']) ? htmlspecialchars($soin['image']) : 'default.jpg' ?>" alt="?= htmlspecialchars($soin['nom']) ?>
@@ -38,13 +39,18 @@ require_once 'header.php';
                     </div>
                     <div class="soin-card-content">
                         <h3><?= htmlspecialchars($soin['nom']) ?></h3>
+                        <div class="soin-details">
+                            <span><i class="fas fa-clock"></i> <?= htmlspecialchars($soin['duree']) ?> minutes</span>
+                            <span class="soin-price"><?= number_format($soin['prix'], 2) ?>€</span>
+                        </div>
                         <p><?= htmlspecialchars($soin['description']) ?></p>
-                        <p class="soin-price"><?= number_format($soin['prix'], 2) ?>€</p>
+                        
                          <div class="soin-action">
                             <a href="/SpaVita-equipe5/public/?page=reservations&soin_id=<?= $soin['id'] ?>" class="btn btn-primary">Réserver</a>
                          </div>
                         </div>
                     </div>
+            </section>
         <?php endforeach; ?>
         </div>
     <?php endif; ?>
