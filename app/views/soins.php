@@ -1,22 +1,53 @@
-<?php
-require_once 'header.php';
+
+<?php 
+require_once 'header.php'; 
 ?>
 
-<h1>Nos Soins</h1>
+<div class="page-banner">
+    <div class="page-banner-overlay"></div>
+    <div class="container">
+        <h2>Nos Soins</h2>
+        <p>Découvrez notre collection de soins pour votre bien-être</p>
+    </div>
+</div>
 
-<?php if (empty($soins)): ?>
-    <p>Aucun soin disponible pour le moment.</p>
-<?php else: ?>
-    <ul>
-        <?php foreach ($soins as $soin): ?>
-            <li>
-                <?= htmlspecialchars($soin['nom']) ?> - <?= number_format($soin['prix'], 2) ?>€
-                <a href="/reservations?soin_id=<?= $soin['id'] ?>">Réserver</a>
-            </li>
+<nav class="soin-navigation">
+    <div class="container">
+        <ul class="soin-nav-links">
+            <li><a href="#massage">Massages</a></li>
+            <li><a href="#visage">Soins du visage</a></li>
+            <li><a href="#hammam">Hammam</a></li>
+            <li><a href="#jacuzzi">Bains à remous</a></li>
+        </ul>
+    </div>
+</nav>
+
+< class="soins-container">
+    <?php if (empty($soins)): ?>
+        <p class="no-soins">Aucun soin disponible pour le moment.</p>
+    <?php else: ?>
+        <div class="soins-grid">
+        <?php foreach ($soins as $soin): ?> 
+                <div class="soin-card">
+                    <div class="soin-card-img">
+                        <img src="SpaVita-equipe5/public/assets/images/<?= !empty($soin['image']) ? htmlspecialchars($soin['image']) : 'default.jpg' ?>" alt="?= htmlspecialchars($soin['nom']) ?>
+                    </div>
+                        <div class="soin-overlay">
+                            <span>Découvrir</span>
+                        </div>
+                    </div>
+                    <div class="soin-card-content">
+                        <h3><?= htmlspecialchars($soin['nom']) ?></h3>
+                        <p><?= htmlspecialchars($soin['description']) ?></p>
+                        <p class="soin-price"><?= number_format($soin['prix'], 2) ?>€</p>
+                         <div class="soin-action">
+                            <a href="/SpaVita-equipe5/public/?page=reservations&soin_id=<?= $soin['id'] ?>" class="btn btn-primary">Réserver</a>
+                         </div>
+                        </div>
+                    </div>
         <?php endforeach; ?>
-    </ul>
-<?php endif; ?>
+        </div>
+    <?php endif; ?>
+</div>
 
-<?php
-require_once 'footer.php';
-?>
+<?php require_once 'footer.php'; ?>

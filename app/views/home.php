@@ -26,7 +26,7 @@ include '../app/views/header.php';
         </div>
 
         <div class="hero-buttons">
-        <a href="/Spavita-equipe5/public/?page=soins" class="btn">Découvir nos soins</a>
+        <a href="/Spavita-equipe5/public/?page=soins" class="btn">Découvrir nos soins</a>
             <a href="/Spavita-equipe5/public/?page=reservations" class="btn">Réserver maintenant</a>
         </div>
     </div>
@@ -89,7 +89,7 @@ include '../app/views/header.php';
         </div>
     </div>
     <div class="service-button">
-        <a href="/Spavita-equipe5/public/?page=soins" class="btn">Décuovrir tous les soins</a>
+        <a href="/Spavita-equipe5/public/?page=soins" class="btn">Découvrir tous les soins</a>
     </div>
 </section>
 
