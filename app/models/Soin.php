@@ -9,7 +9,7 @@ class Soin {
     }
 
     public function getAllSoins() {
-        $stmt = $this->pdo->query("SELECT id, nom, description, prix FROM soins");
+        $stmt = $this->pdo->query("SELECT id, nom, description, prix, categorie, duree, image FROM soins");
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }
