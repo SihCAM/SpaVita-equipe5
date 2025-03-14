@@ -112,7 +112,7 @@ cd SpaVita-equipe5
 ## 👥 Équipe
 
 - CAMARA Sihya
-- ABLAIN Tom
+- ~ABLAIN Tom~
 - SACCOL Nathan
 
 
