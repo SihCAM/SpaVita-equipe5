@@ -1,4 +1,7 @@
-<form method="POST" action="/SpaVita-equipe5/public/?page=register">
+<?php include 'header.php'; ?>
+<form class="register-form" method="POST" action="/SpaVita-equipe5/public/?page=register">
+
+
     <label for="name">Nom :</label>
     <input type="text" name="name" required>
     <label for="email">Email :</label>
@@ -7,3 +10,4 @@
     <input type="password" name="password" required>
     <button type="submit">S'inscrire</button>
 </form>
+<?php include 'footer.php'; ?>

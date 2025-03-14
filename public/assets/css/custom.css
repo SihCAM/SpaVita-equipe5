@@ -1,6 +1,43 @@
 
 /*Styles spécifique */
 
+/* login et register */
+.login-form, .register-form {
+    max-width: 400px;
+    margin: 20px auto; 
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: var(--radius);
+    background-color: var(--white-color);
+    box-shadow: var(--shadow);
+}
+
+
+.login-form input, .register-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: var(--radius);
+    font-family: var(--font-body);
+}
+
+.login-form button, .register-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.login-form button:hover, .register-form button:hover {
+    background-color: var(--secondary-color);
+}
+
+
 /*header*/
 header {
     display:flex;
