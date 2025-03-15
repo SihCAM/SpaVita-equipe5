@@ -6,6 +6,35 @@ require_once 'header.php';
 <div class="page-banner">
     <div class="page-banner-overlay"></div>
     <div class="container">
+        <div class="page-banner-content">
+            <div class="banner-text">
+                <h2>Rechargez votre énergie</h2>
+            <p>Offrez-vous une parenthèse de sérénité et laissez-vous envelopper par nos soins apaisants. Une expérience de bien-être ultime vous attend.</p>
+
+            <ul class="banner-list">
+
+                <li><i class="fas fa-leaf"></i> Massages relaxants</li>
+                <li><i class="fas fa-leaf"></i> Soins du visage</li>
+                <li><i class="fas fa-leaf"></i> Hammam & Sauna</li>
+                <li><i class="fas fa-leaf"></i> Bains à remous</li>
+                <li><i class="fas fa-leaf"></i> Bains extérieurs</li>
+            </ul>
+
+            <div class="customer-service">
+                <i class="fas fa-phone-alt"></i>
+                <div>
+                    <h3>Service client</h3>
+                    <p>Besoin d'aide pour choisir un soin ? Contactez notre équipe au 04 23 45 67 89</p>
+                </div>
+            </div>
+
+            <div class="banner-images">
+                <img src="public/assets/images/banner1.jpg" alt="Soin massage bannière">
+                <img src="public/assets/images/banner2.jpg" alt="Soin visage bannière">
+            </div>
+        </div>
+    </div>
+</div>
         <h2>Nos Soins</h2>
         <p>Découvrez notre collection de soins pour votre bien-être</p>
     </div>
@@ -18,11 +47,12 @@ require_once 'header.php';
             <li><a href="#visage">Soins du visage</a></li>
             <li><a href="#hammam">Hammam</a></li>
             <li><a href="#jacuzzi">Bains à remous</a></li>
+            <li><a href="#outdoor">Bains extérieurs</a></li>
         </ul>
     </div>
 </nav>
 
-< class="soins-container">
+<div class="soins-container">
     <?php if (empty($soins)): ?>
         <p class="no-soins">Aucun soin disponible pour le moment.</p>
     <?php else: ?>
@@ -31,7 +61,7 @@ require_once 'header.php';
             <section id="<?=strtolower(str_replace(' ', '-', $soin['nom'])) ?>" class="soin-section">
                 <div class="soin-card">
                     <div class="soin-card-img">
-                        <img src="SpaVita-equipe5/public/assets/images/<?= !empty($soin['image']) ? htmlspecialchars($soin['image']) : 'default.jpg' ?>" alt="?= htmlspecialchars($soin['nom']) ?>
+                        <img src="SpaVita-equipe5/public/assets/images/<?= !empty($soin['image']) ? htmlspecialchars($soin['image']) : 'default.jpg' ?>" alt="<?= htmlspecialchars($soin['nom']) ?>">
                     </div>
                         <div class="soin-overlay">
                             <span>Découvrir</span>
@@ -50,9 +80,9 @@ require_once 'header.php';
                          </div>
                         </div>
                     </div>
+                </div>
             </section>
         <?php endforeach; ?>
-        </div>
     <?php endif; ?>
 </div>
 
