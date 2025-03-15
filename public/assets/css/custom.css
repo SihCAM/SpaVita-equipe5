@@ -506,8 +506,6 @@ nav ul li a:hover {
     min-height: 150px;
     resize: vertical;
 }
-<<<<<<< HEAD
-=======
 
 
 
@@ -603,4 +601,3 @@ nav ul li a:hover {
 .customer-service i {
     margin-right: 8px;
 }
->>>>>>> 78d8395 (Modification chemin views/login.php &register.php ==> action= "Spavita... remplacer par "index.php?page=login">+ avancement page soins.php (developpement , css))
