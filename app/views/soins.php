@@ -29,15 +29,15 @@ require_once 'header.php';
             </div>
 
             <div class="banner-images">
-                <img src="public/assets/images/banner1.jpg" alt="Soin massage bannière">
-                <img src="public/assets/images/banner2.jpg" alt="Soin visage bannière">
+                <img src="../public/assets/images/banner1.jpg" alt="Soin massage bannière">
+                <img src="../public/assets/images/banner2.jpg" alt="Soin visage bannière">
             </div>
         </div>
     </div>
 </div>
         <h2>Nos Soins</h2>
         <p>Découvrez notre collection de soins pour votre bien-être</p>
-    </div>
+  
 </div>
 
 <nav class="soin-navigation">
@@ -56,13 +56,14 @@ require_once 'header.php';
     <?php if (empty($soins)): ?>
         <p class="no-soins">Aucun soin disponible pour le moment.</p>
     <?php else: ?>
-        <div class="soins-grid">
+        
         <?php foreach ($soins as $soin): ?> 
-            <section id="<?=strtolower(str_replace(' ', '-', $soin['nom'])) ?>" class="soin-section">
+            <section class="soin-section">
                 <div class="soin-card">
+                    <!-- Image du soin -->
                     <div class="soin-card-img">
-                        <img src="SpaVita-equipe5/public/assets/images/<?= !empty($soin['image']) ? htmlspecialchars($soin['image']) : 'default.jpg' ?>" alt="<?= htmlspecialchars($soin['nom']) ?>">
-                    </div>
+                        <img src="../public/assets/images/<?= !empty($soin['image']) ? htmlspecialchars($soin['image']) : 'default.jpg' ?>" alt="<?= htmlspecialchars($soin['nom']) ?>">
+                        <!--Overlay-->
                         <div class="soin-overlay">
                             <span>Découvrir</span>
                         </div>
@@ -80,7 +81,6 @@ require_once 'header.php';
                          </div>
                         </div>
                     </div>
-                </div>
             </section>
         <?php endforeach; ?>
     <?php endif; ?>

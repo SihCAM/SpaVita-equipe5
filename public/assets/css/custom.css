@@ -219,7 +219,7 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.2); /* Assombrit légèrement l’image pour lisibilité */
+    background: rgba(0, 0, 0, 0.1); /* Assombrit légèrement l’image pour lisibilité */
     z-index: 1;
 }
 
@@ -512,22 +512,23 @@ nav ul li a:hover {
 /*-------------- PAGE SOIN -----------------------*/
     /*SECTION BANNIERE*/
 .page-banner {
-    background: url('/SpaVita-equipe5/public/assets/images/spa-background-banner.jpg') no-repeat center / cover; 
+   /* background: url('../images/spa-background-banner.jpg') no-repeat center / cover; */
+   background-color: #8D6E63;
     padding: 80px 5%;
-    color: var(--white-color); /* Texte en blanc */
+    color: var(--primary-color); /* Texte en blanc */
     text-align: left;
     border-radius: 10px;
 }
-
+/*
 .page-banner-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); 
+    background: rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-}
+}*/
 .banner-text {
     z-index: 1;
     max-width: 50%;
@@ -562,8 +563,10 @@ nav ul li a:hover {
 /*IMAGES*/
 .banner-images{
     display: flex;
-    flex-direction: column;
-    gap:10px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
 }
 
 .banner-images img {
@@ -632,7 +635,7 @@ nav ul li a:hover {
 
 /*CONTAINER PRINCIPAL*/
 .soins-container {
-    maw-width: 1100px;
+    max-width: 1100px;
     margin:40px auto;
     padding: 0 20px;
 }
@@ -641,7 +644,7 @@ nav ul li a:hover {
 .soin-card {
     display:flex;
     align-items: center;
-    background: var(--white-color);
+   background: var(--white-color);
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -649,10 +652,14 @@ nav ul li a:hover {
     transition: transform 0.3s ease-in-out;
 }
 .soin-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: var(--shadow-hover);
 }
 .soin-card img {
-    flex: 40%;
+    position: relative;
+    width: 40%;
+    max-height:250px;
+    overflow:hidden;
 }
 .soin-card-img img {
     width: 100%;
@@ -660,14 +667,36 @@ nav ul li a:hover {
     object-fit: cover;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+/*Overlay caché par défaut*/
+.soin-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.soin-card-img:hover .soin-overlay {
+    opacity: 1;
+}
+.soin-card-img:hover img {
+    transform: scale(1.1);
 }
 .soin-card-content{
-    flex:60%;
+    width:60%;
     padding: 20px;
 }
 .soin-card-content h3 {
     font-size: 24px;
     color: var(--secondary-color);
+    font-weight: bold;
     margin-bottom: 10px;
 }
 .soin-details {
@@ -680,6 +709,7 @@ nav ul li a:hover {
 }
 .soin-price {
     font-size: 20px;
+    font-weight: bold;
 }
 .soin-card-content p {
     font-size: 16px;
@@ -698,4 +728,22 @@ nav ul li a:hover {
 }
 .btn-primary:hover {
     background: var(--secondary-color);
+}
+
+@media screen and (max-width: 780px)  {
+    .soin-card {
+        flex-direction: column;
+        text-align:center;
+    }
+    .soin-card img {
+        width: 100%;
+        max-height: 200px;
+    }
+    .soin-card-img img {
+        border-radius: 10px 10px 0 0;
+    }
+    .soin-card-content {
+        width: 100%;
+        padding: 15px;
+    }
 }

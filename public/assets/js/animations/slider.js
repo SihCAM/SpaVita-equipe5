@@ -23,9 +23,5 @@ $(document).ready(function() {
     showTestimonial(currentIndex);
 
 
-    //ANIMATION SOIN-CARD//
-    $(".soin-card").each(function (index) {
-        $(this).css("opacity","0").delay(200*index).animate({opacité:1}, 500);
-    });
 
 });
