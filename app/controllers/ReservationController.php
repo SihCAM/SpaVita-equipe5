@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/../models/Reservation.php';
-require_once __DIR__ . '/../models/Soin.php'; // Pour récupérer la liste des soins
+require_once __DIR__ . '/../models/Soin.php';
 
 class ReservationController {
     private $model;
@@ -11,13 +11,14 @@ class ReservationController {
 
     public function reserver() {
         if (!isset($_SESSION['user'])) {
-            echo "Vous devez être connecté pour réserver un soin.";
+            $_SESSION['error'] = "Vous devez être connecté pour réserver un soin.";
+            header('Location: index.php?page=login');
             exit;
         }
     
         $soin_id = null;
         
-        if (isset($_GET['soin_id'])) { // Si l'utilisateur arrive depuis un lien avec soin_id
+        if (isset($_GET['soin_id'])) {
             $soin_id = intval($_GET['soin_id']);
         }
     
@@ -28,7 +29,8 @@ class ReservationController {
                 $date = htmlspecialchars($_POST['date']);
     
                 if (strtotime($date) < time()) {
-                    echo "La date choisie est invalide.";
+                    $_SESSION['error'] = "La date choisie est invalide.";
+                    header('Location: index.php?page=reservations');
                     exit;
                 }
     
@@ -36,14 +38,13 @@ class ReservationController {
                     header('Location: index.php?page=reservations');
                     exit;
                 } else {
-                    echo "Erreur lors de la réservation.";
+                    $_SESSION['error'] = "Erreur lors de la réservation.";
                 }
             } else {
-                echo "Données manquantes.";
+                $_SESSION['error'] = "Données manquantes.";
             }
         }
     
-        // Charger les soins pour le formulaire de réservation
         $soinModel = new Soin();
         $soins = $soinModel->getAllSoins();
         require_once __DIR__ . '/../views/reservation.php';

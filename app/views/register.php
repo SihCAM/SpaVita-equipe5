@@ -2,6 +2,13 @@
 
 <h2>Inscription</h2>
 
+<?php if (isset($_SESSION['error'])): ?>
+    <div class="error-message">
+        <?= htmlspecialchars($_SESSION['error']) ?>
+    </div>
+    <?php unset($_SESSION['error']); ?>
+<?php endif; ?>
+
 <form class="register-form" method="POST" action="index.php?page=register">
     <label for="name">Nom :</label>
     <input type="text" name="name" required>

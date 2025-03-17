@@ -1,13 +1,20 @@
 <?php
-// Assure-toi que la session est démarrée dans index.php et que la variable $soins est définie
 if (!isset($_SESSION['user'])) {
     echo "<p>Vous devez être connecté pour réserver un soin.</p>";
     exit;
 }
 ?>
+
 <?php require_once 'header.php'; ?>
 
 <h2>Réserver un soin</h2>
+
+<?php if (isset($_SESSION['error'])): ?>
+    <div class="error-message">
+        <?= htmlspecialchars($_SESSION['error']) ?>
+    </div>
+    <?php unset($_SESSION['error']); ?>
+<?php endif; ?>
 
 <form method="POST" action="index.php?page=reservations">
     <label for="soin_id">Sélectionnez le soin :</label>
