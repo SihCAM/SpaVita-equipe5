@@ -5,18 +5,18 @@ if (!isset($_SESSION['user'])) {
     exit;
 }
 ?>
-<?php include 'header.php'; ?>
+<?php require_once 'header.php'; ?>
 
 <h2>Réserver un soin</h2>
 
-<form method="POST" action="/reservation/reserver">
-    <!-- L'ID utilisateur est récupéré dans le contrôleur via la session, donc pas besoin de le passer ici -->
-    
+<form method="POST" action="index.php?page=reservations">
     <label for="soin_id">Sélectionnez le soin :</label>
     <select name="soin_id" id="soin_id" required>
         <?php if (!empty($soins)): ?>
             <?php foreach ($soins as $soin) : ?>
-                <option value="<?= $soin['id'] ?>"><?= htmlspecialchars($soin['nom']) ?></option>
+                <option value="<?= $soin['id'] ?>" <?= isset($_GET['soin_id']) && $_GET['soin_id'] == $soin['id'] ? 'selected' : '' ?>>
+                    <?= htmlspecialchars($soin['nom']) ?>
+                </option>
             <?php endforeach; ?>
         <?php else: ?>
             <option disabled>Aucun soin disponible</option>

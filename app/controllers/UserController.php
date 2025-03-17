@@ -12,7 +12,7 @@ class UserController {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Vérification des champs
             if (empty($_POST['name']) || empty($_POST['email']) || empty($_POST['password'])) {
-                echo "Tous les champs sont obligatoires.";
+                header('Location: /SpaVita-equipe5/public/error.php?message=Tous les champs sont obligatoires.');
                 exit;
             }
 
@@ -21,15 +21,15 @@ class UserController {
             $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
 
             if (!$email) {
-                echo "Email invalide.";
+                header('Location: /SpaVita-equipe5/public/error.php?message=Email invalide.');
                 exit;
             }
 
             if ($this->model->createUser($name, $email, $password)) {
-                header('Location: /SpaVita-equipe5/public/index.php?page=login');
+                header('Location: index.php?page=login');
                 exit;
             } else {
-                echo "Erreur lors de l'inscription.";
+                header('Location: /SpaVita-equipe5/public/error.php?message=Erreur lors de l\'inscription.');
             }
         }
         require_once __DIR__ . '/../views/register.php';
@@ -38,7 +38,7 @@ class UserController {
     public function login() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if (empty($_POST['email']) || empty($_POST['password'])) {
-                echo "Tous les champs sont obligatoires.";
+                header('Location: /SpaVita-equipe5/public/error.php?message=Tous les champs sont obligatoires.');
                 exit;
             }
     
@@ -48,10 +48,10 @@ class UserController {
     
             if ($user && password_verify($password, $user['password'])) {
                 $_SESSION['user'] = $user;
-                header('Location: /SpaVita-equipe5/public/?page=home'); // Redirection vers la page d'accueil après connexion
+                header('Location: index.php?page=home'); // Redirection vers la page d'accueil après connexion
                 exit;
             } else {
-                echo "Email ou mot de passe incorrect.";
+                header('Location: /SpaVita-equipe5/public/error.php?message=Email ou mot de passe incorrect.');
             }            
         }
         require_once __DIR__ . '/../views/login.php'; // Affichage du formulaire de connexion
@@ -59,11 +59,12 @@ class UserController {
 
     public function logout() {
         // Détruire la session pour déconnecter l'utilisateur
-        session_start();
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
         session_unset();
         session_destroy();
-        header('Location: /SpaVita-equipe5/public/?page=home'); // Redirection vers la page d'accueil après la déconnexion
+        header('Location: index.php?page=home'); // Redirection vers la page d'accueil après la déconnexion
         exit;
     }
 }
-?>

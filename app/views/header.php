@@ -17,12 +17,15 @@ if ($hour >= 18) {
     <title>SpaVita</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"> 
 
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Liens CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/custom.css">
 
-    <script src="assets/librairies/jquery.min.js"></script>
+    <!-- Librairie FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <!--Chargement de scripts principaux -->
+    <!-- JS Principal -->
+    <script src="assets/librairies/jquery.min.js"></script>
     <script defer src="assets/js/main.js"></script>
     
 </head>

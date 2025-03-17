@@ -10,27 +10,30 @@ class ReservationController {
     }
 
     public function reserver() {
-        // Vérifier si l'utilisateur est connecté
         if (!isset($_SESSION['user'])) {
             echo "Vous devez être connecté pour réserver un soin.";
             exit;
         }
-
-        // Si le formulaire a été soumis
+    
+        $soin_id = null;
+        
+        if (isset($_GET['soin_id'])) { // Si l'utilisateur arrive depuis un lien avec soin_id
+            $soin_id = intval($_GET['soin_id']);
+        }
+    
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if (isset($_POST['soin_id'], $_POST['date'])) {
                 $user_id = $_SESSION['user']['id'];
                 $soin_id = intval($_POST['soin_id']);
                 $date = htmlspecialchars($_POST['date']);
-
-                // Vérifier que la date est valide et dans le futur
+    
                 if (strtotime($date) < time()) {
-                    echo "La date choisie est invalide. Veuillez sélectionner un créneau futur.";
+                    echo "La date choisie est invalide.";
                     exit;
                 }
-
+    
                 if ($this->model->ajouterReservation($user_id, $soin_id, $date)) {
-                    header('Location: /reservations'); // Redirection en cas de succès
+                    header('Location: index.php?page=reservations');
                     exit;
                 } else {
                     echo "Erreur lors de la réservation.";
@@ -38,13 +41,11 @@ class ReservationController {
             } else {
                 echo "Données manquantes.";
             }
-        } else {
-            // Pour une requête GET, récupérer la liste des soins pour alimenter le formulaire
-            $soinModel = new Soin();
-            $soins = $soinModel->getAllSoins();
         }
-
+    
+        // Charger les soins pour le formulaire de réservation
+        $soinModel = new Soin();
+        $soins = $soinModel->getAllSoins();
         require_once __DIR__ . '/../views/reservation.php';
     }
 }
-?>
