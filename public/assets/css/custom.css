@@ -4,24 +4,33 @@
 /* login et register */
 .login-form, .register-form {
     max-width: 400px;
-    margin: 20px auto; 
-    padding: 20px;
+    margin: 40px auto; 
+    padding: 25px;
     border: 1px solid #ccc;
     border-radius: var(--radius);
     background-color: var(--white-color);
     box-shadow: var(--shadow);
 }
 
+/* Titres des formulaires */
+.register-form h2, .login-form h2 {
+    color: var(--black-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
 
+/* Champs de saisie */
 .login-form input, .register-form input {
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
+    padding: 12px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: var(--radius);
     font-family: var(--font-body);
+    font-size: 14px;
 }
 
+/* Boutons */
 .login-form button, .register-form button {
     width: 100%;
     padding: 12px;
@@ -30,51 +39,57 @@
     border: none;
     border-radius: var(--radius);
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background-color 0.3s;
 }
 
 .login-form button:hover, .register-form button:hover {
     background-color: var(--secondary-color);
 }
 
-.register-mention {
+/* Messages d'erreur */
+.error-message {
+    background-color: #ffdddd;
+    border-left: 4px solid #f44336;
+    padding: 10px;
+    margin-bottom: 15px;
+    color: #d8000c;
+    border-radius: var(--radius);
+}
+
+/* Mentions en dessous des formulaires */
+.register-mention, .login-mention {
     text-align: center;
     margin-top: 15px;
     font-size: 14px;
 }
 
-.register-mention a {
+/* Liens */
+.register-mention a, .login-mention a {
     color: #007bff;
     text-decoration: none;
     font-weight: bold;
 }
 
-.register-mention a:hover {
+.register-mention a:hover, .login-mention a:hover {
     text-decoration: underline;
 }
 
-/* Centrer les titres et les paragraphes sur la page de connexion */
-.login-form h2, .login-form p {
+/* Centrage des titres */
+.login-form h2, .register-form h2, .login-form p, .register-form p {
     text-align: center;
-    margin: 0 auto;
 }
 
-/* Optionnel : ajouter un peu de marge pour aérer le texte */
-.login-form h2 {
-    margin-bottom: 20px;
-}
-
-.login-form p {
-    margin-top: 15px;
-}
-
-/* Responsiveness - Assurer que le texte est bien centré sur toutes les tailles d'écran */
+/* Ajustement de l'affichage pour les appareils mobiles */
 @media (max-width: 768px) {
-    .login-form h2, .login-form p {
-        text-align: center;
+    .login-form, .register-form {
+        padding: 20px;
+    }
+
+    .login-form h2, .register-form h2, .login-form p, .register-form p {
         width: 100%;
     }
 }
+
 
 /*header*/
 header {
