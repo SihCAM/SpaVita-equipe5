@@ -160,22 +160,22 @@ nav ul li a:hover {
 }
 
 
-/*HERO*/
+
+/* Contenu textuel */
 .hero {
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
-    position: relative;
-    background: url('../images/spa-hero.jpg') center / cover fixed; 
-   background-color: #494747;
-    background-blend-mode: overlay;
-    padding: 10px 0;
-    color: #F2F4F3; /* Texte en blanc */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Prend 100% de la hauteur de la fenêtre */
+    background-image: url('../images/spa-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
     text-align: center;
-    
+    flex-shrink: 0;  /* désactiver le rétrécissement pour la section */
 }
 
-/*Contenu textuel */
+/* Contenu central */
 .hero-content {
     max-width: 50%;
     margin: 0 auto;
@@ -185,7 +185,7 @@ nav ul li a:hover {
     font-size: 80px;
     font-weight: bold;
     margin-bottom: 15px;
-    color: var(--white-color)
+    color: var(--white-color);
 }
 
 .hero p {
@@ -193,7 +193,7 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-/*services sous forme de liste */
+/* Services sous forme de liste */
 .hero-services {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -208,7 +208,7 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-/*Boutons*/
+/* Boutons */
 .hero-buttons {
     display: flex;
     gap: 15px;
@@ -232,8 +232,9 @@ nav ul li a:hover {
 .btn-secondary {
     background: transparent;
     color: #F2F4F3;
-    border:2px solid #c0a080;
+    border: 2px solid #c0a080;
 }
+
 
 
 /*PRESENTATION*/

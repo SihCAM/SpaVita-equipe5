@@ -23,12 +23,13 @@
 /*Reset */
 * {
     box-sizing: border-box;
-    margin: O;
+    margin: 0;
     padding: 0;
 }
 
 
-html {
+html, body {
+    height: 100%; /* toute la hauteur de la page */
     font-size: 16px;
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
@@ -39,7 +40,13 @@ body {
     background-color: var(--white-color);
     color: var(--black-color);
     line-height: 1.6;
-    overflow-x:hidden;  
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column; /* pour gérer la structure verticale */
+}
+
+.main-content {
+    flex: 1; /* Permet à la partie principale de prendre l'espace restant (coller le footer en bas)*/
 }
 
 a {
@@ -105,18 +112,6 @@ p {
     margin: 0 auto;
     color: var(--tertiary-color);
 }
-/*hero*/
-.hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-image: url('../images/spa-hero.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    text-align: center;
-}
 
 /*Boutons*/
 .btn {
@@ -145,16 +140,19 @@ p {
     border-color: #ccc;
 }
 
-/*--footer--*/
+/*Footer*/
 .footer {
     background-color: var(--tertiary-color);
     color: var(--white-color);
     padding: 2rem 2rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 .footer-content {
     display: grid;
-    grid-template-columns: 1 fr 2fr;
+    grid-template-columns: 1fr 2fr;
     gap: 3rem;
     margin-bottom: 2rem;
 }
@@ -181,7 +179,8 @@ p {
     display: inline-block;
     position: relative;
 }
-.footer-column a:hover{
+
+.footer-column a:hover {
     color: var(--primary-color);
     transform: translateX(3px);
 }
@@ -191,6 +190,7 @@ p {
     gap: 2rem;
     margin-top: 1rem;
 }
+
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
