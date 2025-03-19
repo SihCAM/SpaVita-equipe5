@@ -37,6 +37,44 @@
     background-color: var(--secondary-color);
 }
 
+.register-mention {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.register-mention a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-mention a:hover {
+    text-decoration: underline;
+}
+
+/* Centrer les titres et les paragraphes sur la page de connexion */
+.login-form h2, .login-form p {
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Optionnel : ajouter un peu de marge pour aérer le texte */
+.login-form h2 {
+    margin-bottom: 20px;
+}
+
+.login-form p {
+    margin-top: 15px;
+}
+
+/* Responsiveness - Assurer que le texte est bien centré sur toutes les tailles d'écran */
+@media (max-width: 768px) {
+    .login-form h2, .login-form p {
+        text-align: center;
+        width: 100%;
+    }
+}
 
 /*header*/
 header {

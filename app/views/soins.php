@@ -104,7 +104,7 @@ require_once 'header.php';
                         <p><?= htmlspecialchars($soin['description']) ?></p>
                         
                          <div class="soin-action">
-                            <a href="/SpaVita-equipe5/public/?page=reservations&soin_id=<?= $soin['id'] ?>" class="btn btn-primary">Réserver</a>
+                            <a href="index.php?page=reservations&soin_id=<?= $soin['id'] ?>" class="btn btn-primary">Réserver</a>
                          </div>
                         </div>
                     </div>
