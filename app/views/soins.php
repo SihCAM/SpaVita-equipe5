@@ -3,45 +3,72 @@
 require_once 'header.php'; 
 ?>
 
-<div class="page-banner">
-    <div class="page-banner-overlay"></div>
-    <div class="container">
-        <div class="page-banner-content">
-            <div class="banner-text">
-                <h2>Rechargez votre énergie</h2>
-            <p>Offrez-vous une parenthèse de sérénité et laissez-vous envelopper par nos soins apaisants. Une expérience de bien-être ultime vous attend.</p>
-
-            <ul class="banner-list">
-
-                <li><i class="fas fa-leaf"></i> Massages relaxants</li>
-                <li><i class="fas fa-leaf"></i> Soins du visage</li>
-                <li><i class="fas fa-leaf"></i> Hammam & Sauna</li>
-                <li><i class="fas fa-leaf"></i> Bains à remous</li>
-                <li><i class="fas fa-leaf"></i> Bains extérieurs</li>
-            </ul>
-
-            <div class="customer-service">
-                <i class="fas fa-phone-alt"></i>
-                <div>
-                    <h3>Service client</h3>
-                    <p>Besoin d'aide pour choisir un soin ? Contactez notre équipe au 04 23 45 67 89</p>
+<div class="container-soin-hero">
+    
+    <div class="spa-banner-soin">
+        <div class="main-soin-image-section">
+            
+            <div class="discount-container">
+                <div class="discount-box">
+                    <span class="discount-pourcentage">-30%</span>
+                    <span class="discount-text">OFF</span>
+                 <div class="discount-support"></div>   
                 </div>
             </div>
+        
+    </div>
 
-            <div class="banner-images">
-                <img src="../public/assets/images/banner1.jpg" alt="Soin massage bannière">
-                <img src="../public/assets/images/banner2.jpg" alt="Soin visage bannière">
-            </div>
+        <!--Contenu de la bannière-->
+        <div class="soin-banner-content">
+                <h2 class="main-soin-title">Rechargez votre énergie</h2>
+                <div class="subtitle-line"></div>
+                <p class="subtitle">TRAITEMENT EXCLUSIF</p>
+                <div class="subtitle-line"></div>
         </div>
     </div>
+            <!--Conteneur des images de services-->
+            <div class="soins-service-container">
+                <div class="service-soin-images">
+                    <div class="service-soin-image">
+                        <img src="../public/assets/images/service1.jpg" alt="Massage relaxant">
+                    </div>      
+                </div>
+                    <div class="service-soin-image">
+                        <img src="../public/assets/images/service2.jpg" alt="Massage relaxant">
+                    </div>
+                    <div class="service-soin-image">
+                        <img src="../public/assets/images/service3.jpg" alt="Massage relaxant">
+                    </div>
+                </div>
+    <div class="hero-soins-info">
+        <div class="hero-text-soin">
+             <p>Offrez-vous une parenthèse de sérénité et laissez-vous envelopper par nos soins apaisants. Une expérience de bien-être ultime vous attend.</p>
+        </div>
+         <div class="contact-soin-item">
+            <i class="fas fa-phone-alt"></i> 
+            <h3>Service client</h3>
+                 <span>Besoin d'aide pour choisir un soin ? Contactez notre équipe au<strong> 04 23 45 67 89</strong></span>
+        </div>
+    </div>
+    
+    </div>
+   
+    
+    
+            
+
+<!--Section Soins-->
+<div class="heading">
+            <h1>PARCOURIR</h1>
+            <h2>Nos Soins</h2>
 </div>
-        <h2>Nos Soins</h2>
-        <p>Découvrez notre collection de soins pour votre bien-être</p>
+
   
 </div>
 
+
 <nav class="soin-navigation">
-    <div class="container">
+    <div class="container-soin-nav-hero">
         <ul class="soin-nav-links">
             <li><a href="#massage">Massages</a></li>
             <li><a href="#visage">Soins du visage</a></li>
@@ -52,7 +79,7 @@ require_once 'header.php';
     </div>
 </nav>
 
-<div class="soins-container">
+<div class="soins-decouverte-container">
     <?php if (empty($soins)): ?>
         <p class="no-soins">Aucun soin disponible pour le moment.</p>
     <?php else: ?>

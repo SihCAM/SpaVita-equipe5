@@ -6,9 +6,9 @@ include '../app/views/header.php';
 <!--Section hero-->
 <section class="hero">
     <div class="hero-content">
-        <h1>Beauté & Bien-être</h1>
-        <p>Offrez-vous un moment de relaxation absolue dans notre spa situé entre lac et montagne</p>
-
+        <h1>BEAUTY & SPA</h1>
+        <p>Offrez-vous un moment de relaxation absolue dans notre spa situé entre Lac et Montagne</p>
+        <!--
         <div class="hero-services">
             <div class="service">
                 <span> Massages relaxants</span>
@@ -23,20 +23,13 @@ include '../app/views/header.php';
             <div class="service">
                 <span> Expérience sensorielle</span>
             </div>
-        </div>
+        </div>-->
 
         <div class="hero-buttons">
-        <a href="/Spavita-equipe5/public/?page=soins" class="btn">Découvrir nos soins</a>
+        <a href="/Spavita-equipe5/public/?page=soins" class="btn">Parcourir nos soins</a>
             <a href="/Spavita-equipe5/public/?page=reservations" class="btn">Réserver maintenant</a>
         </div>
     </div>
-
-    <div class="hero-image"></div>
-        <div class="image-grid"></div>
-            <img src="assets/images/spa-hero1.jpg" alt="Massage relaxant">
-            <img src="assets/images/spa-hero2.svg" alt="Spa intérieur">
-            <img src="assets/images/spa-hero3.jpg" alt="Huiles essentielles">
-        </div>
 </section>
 
 <!--Presentation du spa-->
@@ -66,8 +59,12 @@ include '../app/views/header.php';
 
 <!--Section nos Meilleurs soins -->
 <section class="services">
-    <h2 class="section-title">Nos Meilleurs Soins</h2>
-    <p class="section-subtitle">Découvrez des soins d'exception </p>
+    <div class="heading">
+        <h1>EXPLORER</h1>
+        <h2 class="section-title">Nos Soins Vedettes</h2>
+    <p class="section-subtitle">Laissez vous emporter dans un havre de paix...</p>
+    </div>
+    
     <div class="services-list">
         <div class="service-item">
             <img src="assets/images/meilleur-soin-massage.png" alt="Massage detente">
@@ -141,10 +138,53 @@ include '../app/views/header.php';
     <button class="next"><i class="fas fa-chevron-right"></i></button>
 </section>
 
+<!--Section Service-->
+<section class="services-prestations">
+    <div class="container-services-prestations">
+        <div class="heading">
+            <h1>DECOUVRIR</h1>
+            <h2>Nos services</h2>
+            <p>SpaVita vous offre un univers de détente alliant gastronomie beauté et relaxation...</p>
+        </div>
+    </div>  
+        <div class="services-prestations-content">
+            <div class="left grid2">
+                <div class="box">
+                    <div class="text">
+                        <i class="fa-solid fa-utensils"></i>
+                        <h3>Restaurant Raffiné</h3>
+                    </div>
+                </div> 
+                <div class="box">
+                    <div class="text">
+                        <i class="fa-solid fa-spa"></i>
+                        <h3>Spa & Massages</h3>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="text">
+                        <i class="fa-solid fa-heart"></i>
+                        <h3>Soins Beauté</h3>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="text">
+                        <i class="fa-solid fa-water"></i>
+                        <h3>Bains Extérieurs</h3>
+                    </div>
+                </div>
+            </div>
+                <div class="right">
+                    <img src="assets/images/home/spavita-services.jpg" alt="Services">
+                </div>
+            </div> 
+        </div>
+</section>
+
 
 <!--Section Contact-->
 <section class="contact" id="contact">
-    <div class="container">
+   <div class="container">
         <div class="section-header">
             <h2>Contactez-nous</h2>
             <p>Pour toute question ou pour réserver, n'hesitez pas à nous contacter.</p>
