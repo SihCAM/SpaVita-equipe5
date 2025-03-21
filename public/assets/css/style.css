@@ -188,15 +188,9 @@ p {
     border-color: #ccc;
 }
 
-/*CONFLIT A RESOUDRE bachground ? */
-/*Footer*/
-.btn-linear-color {
-    background: linear-gradient(135deg, var(--primary-color), var(--tertiary-color), #d4af37);
-}
-
 
 /*--FOOTER-*/
-/*
+
 .footer {
     background-color: var(--tertiary-color);
     color: var(--white-color);
