@@ -28,6 +28,12 @@ switch ($page) {
         $controller->reserver();
         break;
 
+    case 'get_reservations':
+        $controller = new ReservationController();
+        $controller->getReservations();
+        break;
+        
+
     case 'login':
         $controller = new UserController();
         $controller->login();

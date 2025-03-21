@@ -1403,3 +1403,144 @@ to {
     background: linear-gradient(135deg, #d4af37, var(--secondary-color), var(--primary-color));
     transform: scale(1.08);
 }
+
+/* Reservation page styles */
+.reservation-page {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: var(--white-color);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.calendar-container {
+    margin: 20px auto;
+    max-width: 1000px;
+    width: 100%;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.reservation-summary {
+    background-color: var(--tertiary-color);
+    color: var(--white-color);
+    padding: 20px;
+    border-radius: var(--radius);
+    text-align: center;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+.reservation-summary:hover {
+    transform: scale(1.02);
+}
+
+#confirm-button {
+    margin-top: 15px;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#confirm-button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* Couleur de fond de la barre d’outils (boutons prev, next...) */
+.fc .fc-toolbar.fc-header-toolbar {
+    background-color: var(--tertiary-color);
+    padding: 10px;
+    border-radius: var(--radius);
+    color: var(--white-color);
+}
+
+/* Style des boutons (prev, next, today...) */
+.fc .fc-button {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    margin: 0 5px;
+    border-radius: var(--radius);
+    transition: background-color 0.3s;
+}
+
+.fc .fc-button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Style du titre du calendrier (mois/année) */
+.fc .fc-toolbar-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--white-color);
+}
+
+/* Fixe une largeur précise pour le titre (mois et année) */
+.fc-toolbar-title {
+    width: 300px; /* Tu peux ajuster la valeur comme tu veux */
+    text-align: center; /* Centre le texte à l'intérieur de l'espace alloué */
+    white-space: nowrap; /* Évite les retours à la ligne */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Ajoute des points de suspension si le texte est trop long */
+}
+
+/* Style des jours dans la grille */
+.fc-daygrid-day {
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.fc-daygrid-day:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Couleur des jours du week-end */
+.fc-day-sat, .fc-day-sun {
+    background-color: #f9f9f9; 
+}
+
+/* Style des événements réservés */
+.fc-event {
+    background-color: #ff6347; 
+    border: none;
+    border-radius: var(--radius);
+    font-size: 0.8rem;
+}
+
+/* Style des jours sélectionnés */
+.fc-daygrid-day.fc-daygrid-day-selected {
+    background-color: rgba(169, 146, 125, 0.2);
+    border: 1px solid var(--primary-color);
+}
+
+/* Rendre le calendrier plus aéré */
+.fc .fc-daygrid-day-frame {
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .reservation-page {
+        padding: 10px;
+    }
+    .calendar-container {
+        max-width: 100%;
+        margin: 10px auto;
+    }
+    .fc .fc-toolbar.fc-header-toolbar {
+        flex-wrap: wrap;
+    }
+    .fc .fc-toolbar-title {
+        font-size: 1.2rem;
+    }
+    .fc-toolbar-title {
+        width: 300px;
+    }
+}
