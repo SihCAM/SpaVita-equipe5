@@ -21,8 +21,7 @@
             <button type="submit">Se connecter</button>
         </form>
 
-        <p class="register-mention">Pas encore de compte ? <strong><a href="index.php?page=register">Créez-en un ici</a></strong> pour réserver vos soins en ligne !</p>
-    </div>
+    <p class="register-mention">Pas encore de compte ? <strong><a href="index.php?page=register">Créez-en un ici</a></strong> pour réserver vos soins en ligne !</p>
+</div>
 </main>
-
 <?php include 'footer.php'; ?>

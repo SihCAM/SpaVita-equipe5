@@ -24,6 +24,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    margin: 0;
     padding: 0;
 }
 
@@ -33,10 +34,15 @@ html, body {
     font-size: 16px;
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
+    height: 100%;
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     font-family: var(--font-body);
+    height: 100%;
+    min-height: 100vh; 
     background-color: var(--white-color);
     color: var(--black-color);
     line-height: 1.6;
@@ -47,6 +53,9 @@ body {
 
 .main-content {
     flex: 1; /* Permet à la partie principale de prendre l'espace restant (coller le footer en bas)*/
+}
+main {
+    flex: 1;
 }
 
 a {
@@ -86,7 +95,46 @@ p {
     margin-bottom: 1.2 rem;
 }
 
-.sectio-header {
+/*headingStyle*/
+.heading {
+    position: relative;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.heading h1 {
+    font-size: 100px;
+    font-weight: 600;
+    opacity: 0.1;
+    font-family: var(--font-main);
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    z-index: 0;
+}
+.heading h2 {
+    position: relative;
+    font-size: 52px;
+    font-family: var(--font-main);
+    font-weight: 700;
+    color: var(--tertiary-color);
+    letter-spacing: 2px;
+    z-index: 1;
+}
+.heading p {
+    position: relative;
+    max-width: 800px;
+   justify-self: center;
+    margin-top: 50px;
+    font-size: 20px;
+    color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+/*HEADER*/
+.section-header {
     position: relative;
     display: inline-block;
     margin-bottom: 1rem;
@@ -140,7 +188,15 @@ p {
     border-color: #ccc;
 }
 
+/*CONFLIT A RESOUDRE bachground ? */
 /*Footer*/
+.btn-linear-color {
+    background: linear-gradient(135deg, var(--primary-color), var(--tertiary-color), #d4af37);
+}
+
+
+/*--FOOTER-*/
+/*
 .footer {
     background-color: var(--tertiary-color);
     color: var(--white-color);
@@ -148,7 +204,8 @@ p {
     position: relative;
     bottom: 0;
     width: 100%;
-}
+}*/
+
 
 .footer-content {
     display: grid;

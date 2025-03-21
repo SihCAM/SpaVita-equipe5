@@ -61,7 +61,7 @@ include '../app/views/header.php';
 <section class="services">
     <div class="heading">
         <h1>EXPLORER</h1>
-        <h2 class="section-title">Nos Soins Vedettes</h2>
+        <h2 class="section-title">Nos Vedettes</h2>
     <p class="section-subtitle">Laissez vous emporter dans un havre de paix...</p>
     </div>
     
