@@ -61,17 +61,28 @@ if (isset($_SESSION['error'])): ?>
         </div>
         
         <nav>
-            <ul>
-                <li><a href="index.php?page=home">Accueil</a></li>
-                <li><a href="index.php?page=soins">Nos Soins</a></li>
-                <li><a href="index.php?page=reservations">Réservations</a></li>
-            <?php if (isset($_SESSION['user'])): ?>
-                <li> <?= $greeting ?>, <?= htmlspecialchars($_SESSION['user']['name']) ?> </li>
-                <li><a href="index.php?page=logout">Se déconnecter</a></li>
-            <?php else: ?>
-                <li><a href="index.php?page=login">Se connecter</a></li>
-                <li><a href="index.php?page=register">S'inscrire</a></li>
-            <?php endif; ?>
-            </ul>
+            <!-- Partie gauche (centrée dans le header) -->
+            <div class="left-menu">
+                <ul>
+                    <li><a href="index.php?page=home">Accueil</a></li>
+                    <li><a href="index.php?page=soins">Nos Soins</a></li>
+                    <li><a href="index.php?page=reservations">Réservations</a></li>
+                </ul>
+            </div>
+
+            <!-- Partie droite (alignée sur la droite) -->
+            <div class="right-menu">
+                <ul>
+                    <?php if (isset($_SESSION['user'])): ?>
+                        <li><?= $greeting ?>, <?= htmlspecialchars($_SESSION['user']['name']) ?></li>
+                        <li><a href="index.php?page=logout">Se déconnecter</a></li>
+                    <?php else: ?>
+                        <li><a href="index.php?page=login">Se connecter</a></li>
+                        <li><a href="index.php?page=register">S'inscrire</a></li>
+                    <?php endif; ?>
+                </ul>
+            </div>
         </nav>
+
+
     </header>

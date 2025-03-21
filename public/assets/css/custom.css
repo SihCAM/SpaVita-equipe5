@@ -117,25 +117,63 @@ header {
     border: 2px solid white;
 }
 
+
+/*Menu principal*/
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+}
 /*Menu*/
 nav ul {
     display: flex;
     list-style: none;
     gap: 20px;
     padding:0;
+    width: 100%; /* Prend toute la largeur disponible */
+    margin-right: 40px;
+}
+
+/* Séparation entre les deux groupes */
+.right-menu {
+    margin-left: auto; /* Pousse ce groupe d'éléments vers la droite */
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Ajuste l'espacement entre les éléments de droite */
+}
+
+/* Partie gauche (centrée dans le header) */
+.left-menu {
+    display: flex;
+}
+
+/* Menu de la partie gauche */
+.left-menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
     position:relative;
+    display: flex;
+    align-items: center;
 }
 
-nav ul li a {
+
+
+nav ul li a, nav ul li:not(:has(a)) { /* Cible les <li> qui ne contiennent pas de lien */
     text-decoration: none;
-    font-weight: bold;
     color: #fff;
     padding: 10px 15px;
     display: block;
     transition: color 0.3s ease-in-out;
+}
+
+nav ul li a {
+    font-weight: bold;
 }
 
 /*Trait sous le menu au survol*/
