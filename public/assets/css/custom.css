@@ -435,7 +435,7 @@ nav ul li a:hover {
     display:block;
     font-size:18px;
     font-weight: bold;
-    background: #333;
+    background: var(--primary-color);
     padding: 5px 10px;
     border-radius: 5px;
     width: fit-content;

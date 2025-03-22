@@ -49,19 +49,4 @@ class ReservationController {
         $soins = $soinModel->getAllSoins();
         require_once __DIR__ . '/../views/reservation.php';
     }
-    
-    public function getReservations() {
-        header('Content-Type: application/json');
-        $reservations = $this->model->getAllReservations();
-        $events = [];
-        foreach ($reservations as $reservation) {
-            $events[] = [
-                'title' => 'Réservé',
-                'start' => $reservation['date_reservation'],
-                'color' => '#FF6347'
-            ];
-        }
-        echo json_encode($events);
-    }
-    
 }
