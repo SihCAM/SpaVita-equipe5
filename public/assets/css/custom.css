@@ -122,7 +122,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 90%;
+    width: 93%;
 }
 /*Menu*/
 nav ul {
@@ -1441,7 +1441,7 @@ to {
 /*----------------- PAGE RESERVATION---------------------*/
 /*Body position relative ?? Arevoir*/ 
     /*SMAIN BOOKING CONTAINER*/
-    .booking-container{
+    .booking-container{ 
         display: flex;
         gap: 2rem;
         margin-top:2rem;

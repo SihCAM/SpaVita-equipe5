@@ -210,34 +210,42 @@ p {
     position: relative;
     text-align: center;
     margin-bottom: 60px;
+    padding-top: 80px; /* Laisse un peu d'espace au-dessus */
 }
 
+/* H1 semi-transparent en arrière-plan */
 .heading h1 {
     font-size: 100px;
     font-weight: 600;
-    opacity: 0.1;
+    opacity: 0.05;
     font-family: var(--font-main);
     position: absolute;
-    top: -30px;
+    top: 50%; /* Centre verticalement */
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /* Centre parfaitement au milieu */
     white-space: nowrap;
     z-index: 0;
 }
+
+/* H2 superposé au H1 */
 .heading h2 {
-    position: relative;
+    position: absolute;
+    top: 50%; /* Centre verticalement au même endroit que le H1 */
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 52px;
     font-family: var(--font-main);
     font-weight: 700;
     color: var(--tertiary-color);
     letter-spacing: 2px;
-    z-index: 1;
+    z-index: 1; /* Plus haut que le H1 */
 }
+
+/* Paragraphe */
 .heading p {
     position: relative;
     max-width: 800px;
-   justify-self: center;
-    margin-top: 50px;
+    margin: 50px auto 0;
     font-size: 20px;
     color: var(--secondary-color);
     line-height: 1.6;
