@@ -18,5 +18,11 @@ class Reservation {
         $stmt->execute([$user_id]);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    public function getAllReservations() {
+        $stmt = $this->pdo->query("SELECT * FROM reservations");
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+    
 }
 ?>
