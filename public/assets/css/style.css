@@ -8,9 +8,13 @@
     --white-color: #F2F4F3;
     --black-color: #000;
     --color-overlay: rgba(34, 51, 59, 0.7);
+    
+    --danger: rgb(162, 8, 8);
+
     --font-main:'Playfair Display', Georgia, serif;
     --font-body: 'Lato', sans-serif;
     --transition: all 0.3s ease;
+
     --radius: 4px;
     --shadow: 0 4px 12px rgba(0,0,0,0.1);
     --shadow-hover: 0 8px 24px rgba(0,0,0,0.15);
@@ -49,6 +53,52 @@ body {
     overflow-x: hidden;
     display: flex;
     flex-direction: column; /* pour gérer la structure verticale */
+}
+
+/*Menu*/
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    padding:0;
+}
+
+nav ul li {
+    position:relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    padding: 10px 15px;
+    display: block;
+    transition: color 0.3s ease-in-out;
+}
+
+/*Trait sous le menu au survol*/
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background-color: #F2F4F3;
+    transform: translateX(-50%);
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #F2F4F3;
+}
+
+nav ul li a.active {
+    color: var(--primary-color);
 }
 
 .main-content {
@@ -93,6 +143,66 @@ h4 {
 
 p {
     margin-bottom: 1.2 rem;
+}
+
+/*Boutons*/
+.btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: var(--radius);
+    border: 1px solid transparent;
+    margin-bottom: 0;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    color: #333;
+    font-family: var(--font-body);
+    position:relative;
+    overflow: hidden;
+    z-index: 1;
+    background-color: #fff;
+    border-color: #ccc;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background-color: #f4f4f4;
+    color: #333;
+    border-color: #ccc;
+}
+
+.button-primary {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.75rem 1.5rem;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.button-primary:hover {
+    background-color: var(--secondary-color)
+}
+.button-primary:disabled {
+    background-color: #e5e5e5;
+    cursor: not-allowed;
+}
+.button-large {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-color), var(--tertiary-color), #d4af37);
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+.button-large:hover {
+    background: linear-gradient(135deg, #d4af37, var(--secondary-color), var(--primary-color));
+    transform: scale(1.08);
 }
 
 /*headingStyle*/
@@ -159,33 +269,6 @@ p {
     max-width: 700px;
     margin: 0 auto;
     color: var(--tertiary-color);
-}
-
-/*Boutons*/
-.btn {
-    text-decoration: none;
-    display: inline-block;
-    padding: 12px 28px;
-    border-radius: var(--radius);
-    border: 1px solid transparent;
-    margin-bottom: 0;
-    font-weight: 500;
-    text-align: center;
-    cursor: pointer;
-    color: #333;
-    font-family: var(--font-body);
-    position:relative;
-    overflow: hidden;
-    z-index: 1;
-    background-color: #fff;
-    border-color: #ccc;
-    transition: var(--transition);
-}
-
-.btn:hover {
-    background-color: #f4f4f4;
-    color: #333;
-    border-color: #ccc;
 }
 
 

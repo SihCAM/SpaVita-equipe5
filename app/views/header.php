@@ -32,9 +32,17 @@ if (isset($_SESSION['error'])): ?>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/custom.css">
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <script src="assets/librairies/jquery.min.js"></script>
+    <!--jquery-->
+    <script src="assets/librairies/jquery/jquery.min.js"></script>
+
+    <!--jquery-ui-->
+    <link rel="stylesheet" href="assets/librairies/jquery-ui/jquery-ui.min.css">
+    <script src="assets/librairies/jquery-ui/jquery-ui.min.js"></script>
+
+    <!--main.js-->
     <script defer src="assets/js/main.js"></script>
 </head>
+
 <body>
     <header>
         <div>

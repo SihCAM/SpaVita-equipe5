@@ -117,48 +117,6 @@ header {
     border: 2px solid white;
 }
 
-/*Menu*/
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-    padding:0;
-}
-
-nav ul li {
-    position:relative;
-}
-
-nav ul li a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #fff;
-    padding: 10px 15px;
-    display: block;
-    transition: color 0.3s ease-in-out;
-}
-
-/*Trait sous le menu au survol*/
-nav ul li a::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    width: 0;
-    height: 3px;
-    background-color: #F2F4F3;
-    transform: translateX(-50%);
-    transition: all 0.3s ease-in-out;
-}
-
-nav ul li a:hover::after {
-    width: 100%;
-}
-
-nav ul li a:hover {
-    color: #F2F4F3;
-}
-
 
 
 /* Contenu textuel */
@@ -987,11 +945,9 @@ box-shadow:0 15px 30px rgba(0, 0, 0, 0.1);
     background: var(--white-color);
     position: relative;
     width: 100%;
-    
     margin-bottom: 220px;
     display: flex;
     justify-content: center;
-   background-color: #f5f5f5;
 }
 .container-soin-nav-hero {
 max-width: 1200px;
@@ -1057,7 +1013,7 @@ height: 300px;
     font-weight: 600;
     width: 100%;
     padding: 12px 30px;
-    border-radius: 30px;
+    border-radius: 30px 0 30px; 
     transition: color 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -1184,7 +1140,7 @@ height: 300px;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 25%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     display: flex;
@@ -1388,8 +1344,9 @@ to {
     }
 }
 .btn-offre {
+    display: inline-block;
     background: linear-gradient(135deg, var(--primary-color), var(--tertiary-color), #d4af37);
-    color:var(--white-color);
+    color: var(--white-color);
     padding: 15px 45px;
     border-radius: 30px;
     text-decoration: none;
@@ -1403,3 +1360,208 @@ to {
     background: linear-gradient(135deg, #d4af37, var(--secondary-color), var(--primary-color));
     transform: scale(1.08);
 }
+
+
+
+
+/*----------------- PAGE RESERVATION---------------------*/
+/*Body position relative ?? Arevoir*/ 
+    /*SMAIN BOOKING CONTAINER*/
+    .booking-container{
+        display: flex;
+        gap: 2rem;
+        margin-top:2rem;
+    }
+    .booking-main {
+        flex: 3;
+    }
+    .booking-recap {
+        flex: 1;
+    }
+    .booking-section {
+        background-color: var(--white-color);
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    /*Form element*/
+    .form-group {
+        margin-bottom: 1rem;
+    }
+    label {
+        display: block;
+        margin-bottom: 0.25rem;
+        font-weight: 500;
+        color: var(--tertiary-color)
+    }
+    .input-field {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #e5e5e5;
+        border-radius: 0.25rem;
+        transition: border-color 0.3s;
+    }
+    .input-fiel:focus {
+        outline: none;
+        border-color: var(--primary-color)
+    }
+    .input-field:disabled {
+        background-color: #e5e5e5;
+        cursor: not-allowed;
+    }
+    textarea.input-field {
+        MIN-HEIGHT: 100px;
+        resize: vertical;
+    }
+
+    /*Calendrier*/
+    #booking-calendar {
+        margin-top: 1rem;
+        font-size: 1.2rem;
+    }
+    .ui-datepicker {
+        width: 100%;
+        padding: 0;
+        font-family: var (--font-body);
+        max-width: none;
+    }
+    .ui-datepicker .ui-datepicker-header {
+        background-color: var(--primary-color);
+        border: none;
+        border-radius: 0.25rem 0.25rem 0 0;
+        padding: 1rem;
+    }
+    .ui-datepicker .ui-datepicker-title {
+        font-family: var(--font-main);
+        color: var(--white-color);
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+    .ui-datepicker .ui-datepicker-prev,
+    .ui-datepicker .ui-datepicker-next {
+        top: 1.2rem;
+        cursor: pointer;
+    }
+    .ui-datepicker .ui-datepicker-prev span-recap,
+    .ui-datepicker .ui-datepicker-next span-recap {
+        transform: scale(1.5);
+    }
+
+    .ui-datepicker table {
+        margin: 0.5em auto;
+        width: 100%;
+    }
+
+
+
+    .ui-datepicker th {
+        font-weight: 600;
+        color: var(--tertiary-color);
+        padding: 1rem 0;
+    }
+    .ui-datepicker td {
+        padding: 5px;
+        height: 3rem;
+    }
+    .ui-datepicker td a {
+        text-align: center;
+        border-radius: 0.25rem;
+        transition: all 0.3s;
+        padding: 0.8rem;
+        font-size: 1.1rem;
+        display: fmex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    .ui-datepicker td a.ui-state-default {
+        background: none;
+        border: 1px solid transparent;
+    }
+    .ui-datepicker td a.ui-state-active {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        border-color: var(--primary-color);
+        font-weight: bold;
+    }
+    .ui-datepicker td a.ui-state-hover {
+        background-color: #bfab96;
+        color: var(--white-color);
+    }
+
+    .ui-datepicker td a.ui-state-disabled {
+        opacity: 0.5;
+    }
+
+    /*BUtton navigation calendrier*/
+
+
+
+
+    /*Recaptipulative section*/
+    .recap-item {
+        margin-bottom: 0.5rem;
+    }
+    .recap-header  {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.25rem;
+        font-weight: 500;
+    }
+    .recap-header i {
+        color: var(--primary-color);
+        margin-right: 0.5rem;
+    }
+    .recap-content {
+        padding-left:calc(0.5rem) + 0.5rem;
+    }
+    .empty-message {
+        font-style: italic;
+        color: #888;
+    }
+    #soin-list {
+        list-style: none;
+        margin-top: 0.5rem;
+    }
+    #soin-list li {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.25rem 0;
+        border-bottom: 1px solid #e5e5e5;
+    }
+    #soin-list li:last-child {
+       border-bottom: none;
+    }
+    .treatment-details {
+        flex: 1;
+    }
+    .treatment-actions {
+        display: flex;
+        align-items: center;
+    }
+    .treatment-price {
+        margin-right: 0.5rem;
+    }
+    .remove-treatment {
+        color: var(--danger);
+        background: none;
+        border: none;
+        cursor: poiner;
+        font-size: 0.9rem;
+        transition: opacity 0.3s;
+    }
+    .remove-treatment:hover {
+        opacity: 0.7;
+    }
+
+    .recap-total {
+        margin-top: 1rem;
+        font-weight: 700;
+        text-align: right;
+        padding-top: 0.5rem;
+        border-top: 1px solid #e5e5e5;
+    }
+
+
+

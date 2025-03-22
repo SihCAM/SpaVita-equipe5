@@ -125,7 +125,7 @@ $soinsParCategorie[$categorie] [] =$soin;
 
 <section class="offre-mois"id="offre-mois">
     <div class="offre-container">
-        <h2>Profitez de <span class=>l'offre du mois</span></h2>
+        <h2>Profitez de l'offre du mois</h2>
         <p>Un soin visage complet + Massage relaxant à 
             <span class="shine-text"> -30%</span></p>
         <a href="SpaVita-equipe5/public/?page=reservations" class="btn-offre"> J'en profite</a>
