@@ -117,7 +117,6 @@ header {
     border: 2px solid white;
 }
 
-
 /*Menu principal*/
 nav {
     display: flex;
@@ -196,8 +195,6 @@ nav ul li a:hover::after {
 nav ul li a:hover {
     color: #F2F4F3;
 }
-
-
 
 /* Contenu textuel */
 .hero {
@@ -1025,11 +1022,9 @@ box-shadow:0 15px 30px rgba(0, 0, 0, 0.1);
     background: var(--white-color);
     position: relative;
     width: 100%;
-    
     margin-bottom: 220px;
     display: flex;
     justify-content: center;
-   background-color: #f5f5f5;
 }
 .container-soin-nav-hero {
 max-width: 1200px;
@@ -1095,7 +1090,7 @@ height: 300px;
     font-weight: 600;
     width: 100%;
     padding: 12px 30px;
-    border-radius: 30px;
+    border-radius: 30px 0 30px; 
     transition: color 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -1222,7 +1217,7 @@ height: 300px;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 25%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     display: flex;
@@ -1426,8 +1421,9 @@ to {
     }
 }
 .btn-offre {
+    display: inline-block;
     background: linear-gradient(135deg, var(--primary-color), var(--tertiary-color), #d4af37);
-    color:var(--white-color);
+    color: var(--white-color);
     padding: 15px 45px;
     border-radius: 30px;
     text-decoration: none;
@@ -1442,143 +1438,201 @@ to {
     transform: scale(1.08);
 }
 
-/* Reservation page styles */
-.reservation-page {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: var(--white-color);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-}
-
-.calendar-container {
-    margin: 20px auto;
-    max-width: 1000px;
-    width: 100%;
-    border-radius: var(--radius);
-    overflow: hidden;
-    box-shadow: var(--shadow);
-}
-
-.reservation-summary {
-    background-color: var(--tertiary-color);
-    color: var(--white-color);
-    padding: 20px;
-    border-radius: var(--radius);
-    text-align: center;
-    margin-top: 20px;
-    transition: transform 0.3s ease;
-}
-
-.reservation-summary:hover {
-    transform: scale(1.02);
-}
-
-#confirm-button {
-    margin-top: 15px;
-    padding: 12px;
-    background-color: var(--primary-color);
-    color: var(--white-color);
-    border: none;
-    border-radius: var(--radius);
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-#confirm-button:hover {
-    background-color: var(--secondary-color);
-    transform: translateY(-2px);
-}
-
-/* Couleur de fond de la barre d’outils (boutons prev, next...) */
-.fc .fc-toolbar.fc-header-toolbar {
-    background-color: var(--tertiary-color);
-    padding: 10px;
-    border-radius: var(--radius);
-    color: var(--white-color);
-}
-
-/* Style des boutons (prev, next, today...) */
-.fc .fc-button {
-    background-color: var(--primary-color);
-    color: var(--white-color);
-    border: none;
-    margin: 0 5px;
-    border-radius: var(--radius);
-    transition: background-color 0.3s;
-}
-
-.fc .fc-button:hover {
-    background-color: var(--secondary-color);
-}
-
-/* Style du titre du calendrier (mois/année) */
-.fc .fc-toolbar-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    color: var(--white-color);
-}
-
-/* Fixe une largeur précise pour le titre (mois et année) */
-.fc-toolbar-title {
-    width: 300px; /* Tu peux ajuster la valeur comme tu veux */
-    text-align: center; /* Centre le texte à l'intérieur de l'espace alloué */
-    white-space: nowrap; /* Évite les retours à la ligne */
-    overflow: hidden;
-    text-overflow: ellipsis; /* Ajoute des points de suspension si le texte est trop long */
-}
-
-/* Style des jours dans la grille */
-.fc-daygrid-day {
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.fc-daygrid-day:hover {
-    background-color: rgba(0, 0, 0, 0.05);
-}
-
-/* Couleur des jours du week-end */
-.fc-day-sat, .fc-day-sun {
-    background-color: #f9f9f9; 
-}
-
-/* Style des événements réservés */
-.fc-event {
-    background-color: #ff6347; 
-    border: none;
-    border-radius: var(--radius);
-    font-size: 0.8rem;
-}
-
-/* Style des jours sélectionnés */
-.fc-daygrid-day.fc-daygrid-day-selected {
-    background-color: rgba(169, 146, 125, 0.2);
-    border: 1px solid var(--primary-color);
-}
-
-/* Rendre le calendrier plus aéré */
-.fc .fc-daygrid-day-frame {
-    padding: 20px;
-}
-
-@media (max-width: 768px) {
-    .reservation-page {
-        padding: 10px;
+/*----------------- PAGE RESERVATION---------------------*/
+/*Body position relative ?? Arevoir*/ 
+    /*SMAIN BOOKING CONTAINER*/
+    .booking-container{
+        display: flex;
+        gap: 2rem;
+        margin-top:2rem;
     }
-    .calendar-container {
-        max-width: 100%;
-        margin: 10px auto;
+    .booking-main {
+        flex: 3;
     }
-    .fc .fc-toolbar.fc-header-toolbar {
-        flex-wrap: wrap;
+    .booking-recap {
+        flex: 1;
     }
-    .fc .fc-toolbar-title {
+    .booking-section {
+        background-color: var(--white-color);
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    /*Form element*/
+    .form-group {
+        margin-bottom: 1rem;
+    }
+    label {
+        display: block;
+        margin-bottom: 0.25rem;
+        font-weight: 500;
+        color: var(--tertiary-color)
+    }
+    .input-field {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #e5e5e5;
+        border-radius: 0.25rem;
+        transition: border-color 0.3s;
+    }
+    .input-fiel:focus {
+        outline: none;
+        border-color: var(--primary-color)
+    }
+    .input-field:disabled {
+        background-color: #e5e5e5;
+        cursor: not-allowed;
+    }
+    textarea.input-field {
+        MIN-HEIGHT: 100px;
+        resize: vertical;
+    }
+
+    /*Calendrier*/
+    #booking-calendar {
+        margin-top: 1rem;
         font-size: 1.2rem;
     }
-    .fc-toolbar-title {
-        width: 300px;
+    .ui-datepicker {
+        width: 100%;
+        padding: 0;
+        font-family: var (--font-body);
+        max-width: none;
     }
-}
+    .ui-datepicker .ui-datepicker-header {
+        background-color: var(--primary-color);
+        border: none;
+        border-radius: 0.25rem 0.25rem 0 0;
+        padding: 1rem;
+    }
+    .ui-datepicker .ui-datepicker-title {
+        font-family: var(--font-main);
+        color: var(--white-color);
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+    .ui-datepicker .ui-datepicker-prev,
+    .ui-datepicker .ui-datepicker-next {
+        top: 1.2rem;
+        cursor: pointer;
+    }
+    .ui-datepicker .ui-datepicker-prev span-recap,
+    .ui-datepicker .ui-datepicker-next span-recap {
+        transform: scale(1.5);
+    }
+
+    .ui-datepicker table {
+        margin: 0.5em auto;
+        width: 100%;
+    }
+
+
+
+    .ui-datepicker th {
+        font-weight: 600;
+        color: var(--tertiary-color);
+        padding: 1rem 0;
+    }
+    .ui-datepicker td {
+        padding: 5px;
+        height: 3rem;
+    }
+    .ui-datepicker td a {
+        text-align: center;
+        border-radius: 0.25rem;
+        transition: all 0.3s;
+        padding: 0.8rem;
+        font-size: 1.1rem;
+        display: fmex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    .ui-datepicker td a.ui-state-default {
+        background: none;
+        border: 1px solid transparent;
+    }
+    .ui-datepicker td a.ui-state-active {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        border-color: var(--primary-color);
+        font-weight: bold;
+    }
+    .ui-datepicker td a.ui-state-hover {
+        background-color: #bfab96;
+        color: var(--white-color);
+    }
+
+    .ui-datepicker td a.ui-state-disabled {
+        opacity: 0.5;
+    }
+
+    /*BUtton navigation calendrier*/
+
+
+
+
+    /*Recaptipulative section*/
+    .recap-item {
+        margin-bottom: 0.5rem;
+    }
+    .recap-header  {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.25rem;
+        font-weight: 500;
+    }
+    .recap-header i {
+        color: var(--primary-color);
+        margin-right: 0.5rem;
+    }
+    .recap-content {
+        padding-left:calc(0.5rem) + 0.5rem;
+    }
+    .empty-message {
+        font-style: italic;
+        color: #888;
+    }
+    #soin-list {
+        list-style: none;
+        margin-top: 0.5rem;
+    }
+    #soin-list li {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.25rem 0;
+        border-bottom: 1px solid #e5e5e5;
+    }
+    #soin-list li:last-child {
+       border-bottom: none;
+    }
+    .treatment-details {
+        flex: 1;
+    }
+    .treatment-actions {
+        display: flex;
+        align-items: center;
+    }
+    .treatment-price {
+        margin-right: 0.5rem;
+    }
+    .remove-treatment {
+        color: var(--danger);
+        background: none;
+        border: none;
+        cursor: poiner;
+        font-size: 0.9rem;
+        transition: opacity 0.3s;
+    }
+    .remove-treatment:hover {
+        opacity: 0.7;
+    }
+
+    .recap-total {
+        margin-top: 1rem;
+        font-weight: 700;
+        text-align: right;
+        padding-top: 0.5rem;
+        border-top: 1px solid #e5e5e5;
+    }
