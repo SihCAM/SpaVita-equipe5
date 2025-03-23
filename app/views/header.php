@@ -47,7 +47,7 @@ if (isset($_SESSION['error'])): ?>
 
     <header>
         <div>
-            <a href="/SpaVita-equipe5/public/?page=home">
+            <a href="index.php?page=home">
                 <img src="assets/images/logo.png" alt="Logo SpaVita" class="logo">
             </a>
         </div>

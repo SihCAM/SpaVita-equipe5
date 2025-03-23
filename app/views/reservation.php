@@ -5,26 +5,12 @@ if (!isset($_SESSION['user'])) {
 }
 ?>
 
-<!--Nathan, A voir si on garde json ou on defini le soin en js (booking.js) ???-->
 <?php require_once 'header.php'; ?>
 <?php if (isset($soins)) : ?>
 <script>
     const soins = <?= json_encode($soins); ?>
 </script>
 <?php endif; ?>
-
-<!--NOUVELLE VERSION-->
-
-<?php
-if (!isset($_SESSION['user'])) {
-    echo "<p>Vous devez être connecté pour réserver un soin.</p>";
-    exit;
-}
-?>
-
-<?php require_once 'header.php'; ?>
-
-
 
 <main>
 

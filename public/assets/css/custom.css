@@ -1518,12 +1518,15 @@ to {
         padding: 0;
         font-family: var(--font-body);
         max-width: none;
+        border-radius: var(--radius);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
     .ui-datepicker .ui-datepicker-header {
         background-color: var(--primary-color);
+        color: var(--white-color);
         border: none;
-        border-radius: 0.25rem 0.25rem 0 0;
-        padding: 3rem;
+        padding: 1rem;
+        border-radius: var(--radius) var(--radius) 0 0;
     }
     .ui-datepicker .ui-datepicker-title {
         font-family: var(--font-main);
@@ -1533,7 +1536,6 @@ to {
     }
     .ui-datepicker .ui-datepicker-prev,
     .ui-datepicker .ui-datepicker-next {
-        top: 1.2rem;
         cursor: pointer;
     }
     .ui-datepicker .ui-datepicker-prev span-recap,
