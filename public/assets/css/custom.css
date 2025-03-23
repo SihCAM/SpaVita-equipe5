@@ -1438,222 +1438,306 @@ to {
     transform: scale(1.08);
 }
 
-/*----------------- PAGE RESERVATION---------------------*/
-/*Body position relative ?? Arevoir*/ 
-    /*SMAIN BOOKING CONTAINER*/
+/*========================
+   PAGE RESERVATION - CONTENEURS
+========================*/
+.container-booking {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
 
-    #calendar-section {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;    
-    }
-
-    #booking-calendar {
-        width: 100%;
-        max-width: 2200px; 
-        display: flex;
-    }
-    .container-booking{
-        width: 100%;
-        padding: 1rem;
-    }
-    .booking-container{   
-        display: flex;
-        gap: 2rem;
-        margin-top: 2rem;
+/* Sur desktop, la disposition est en ligne */
+@media (min-width: 768px) {
+    .container-booking {
+        flex-direction: row;
     }
     .booking-main {
         flex: 3;
-        width: 100%;
     }
     .booking-recap {
         flex: 1;
     }
-    .booking-section {
-        background-color: var(--white-color);
-        border-radius: 0.5rem;
-        padding: 1.5rem;
-        margin-bottom: 1rem;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        width: 100%;
-    }
-    /*Form element*/
-    .form-group {
-        margin-bottom: 1rem;
-    }
-    label {
-        display: block;
-        margin-bottom: 0.25rem;
-        font-weight: 500;
-        color: var(--tertiary-color)
-    }
-    .input-field {
-        width: 100%;
-        padding: 0.75rem;
-        border: 1px solid #e5e5e5;
-        border-radius: 0.25rem;
-        transition: border-color 0.3s;
-    }
-    .input-fiel:focus {
-        outline: none;
-        border-color: var(--primary-color)
-    }
-    .input-field:disabled {
-        background-color: #e5e5e5;
-        cursor: not-allowed;
-    }
-    textarea.input-field {
-        min-height: 100px;
-        resize: vertical;
-    }
+}
 
-    /*Calendrier*/
-    #booking-calendar {
-        margin-top: 1rem;
-        font-size: 2rem;
-    }
-    .ui-datepicker {
-        width: 100%;
-        padding: 0;
-        font-family: var(--font-body);
-        max-width: none;
-        border-radius: var(--radius);
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    .ui-datepicker .ui-datepicker-header {
-        background-color: var(--primary-color);
-        color: var(--white-color);
-        border: none;
-        padding: 1rem;
-        border-radius: var(--radius) var(--radius) 0 0;
-    }
-    .ui-datepicker .ui-datepicker-title {
-        font-family: var(--font-main);
-        color: var(--white-color);
-        font-size: 1.4rem;
-        font-weight: 600;
-    }
-    .ui-datepicker .ui-datepicker-prev,
-    .ui-datepicker .ui-datepicker-next {
-        cursor: pointer;
-    }
-    .ui-datepicker .ui-datepicker-prev span-recap,
-    .ui-datepicker .ui-datepicker-next span-recap {
-        transform: scale(1.5);
-    }
+.booking-main {
+    flex: 3;
+    width: 100%;
+}
 
-    .ui-datepicker table {
-        margin: 0.5em auto;
-        width: 100%;
-    }
+.booking-recap {
+    flex: 1;
+    background-color: var(--white-color);
+    color: var(--white-color);
+    padding: 20px;
+    border-radius: var(--radius);
+    transition: transform 0.3s ease;
+}
 
+.booking-recap:hover {
+    transform: translateY(-5px);
+}
 
+/* Section générale de réservation */
+.booking-section {
+    background-color: var(--white-color);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
 
-    .ui-datepicker th {
-        font-weight: 600;
-        color: var(--tertiary-color);
-        padding: 1rem 0;
-    }
-    .ui-datepicker td {
-        padding: 5px;
-        height: 3rem;
-    }
-    .ui-datepicker td a {
-        text-align: center;
-        border-radius: 0.25rem;
-        transition: all 0.3s;
-        padding: 0.8rem;
-        font-size: 1.1rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-    }
-    .ui-datepicker td a.ui-state-default {
-        background: none;
-        border: 1px solid transparent;
-    }
-    .ui-datepicker td a.ui-state-active {
-        background-color: var(--primary-color);
-        color: var(--secondary-color);
-        border-color: var(--primary-color);
-        font-weight: bold;
-    }
-    .ui-datepicker td a.ui-state-hover {
-        background-color: #bfab96;
-        color: var(--white-color);
-    }
+/*========================
+   FORM ELEMENTS
+========================*/
+.form-group {
+    margin-bottom: 1rem;
+}
 
-    .ui-datepicker td a.ui-state-disabled {
-        opacity: 0.5;
-    }
+label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: 500;
+    color: var(--tertiary-color);
+}
 
-    /*BUtton navigation calendrier*/
+.input-field {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e5e5e5;
+    border-radius: 0.25rem;
+    transition: border-color 0.3s;
+    font-family: var(--font-body);
+    font-size: 1rem;
+}
 
+.input-field:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
 
+.input-field:disabled {
+    background-color: #e5e5e5;
+    cursor: not-allowed;
+}
 
+textarea.input-field {
+    min-height: 100px;
+    resize: vertical;
+}
 
-    /*Recaptipulative section*/
-    .recap-item {
-        margin-bottom: 0.5rem;
-    }
-    .recap-header  {
-        display: flex;
-        align-items: center;
-        margin-bottom: 0.25rem;
-        font-weight: 500;
-    }
-    .recap-header i {
-        color: var(--primary-color);
-        margin-right: 0.5rem;
-    }
-    .recap-content {
-        padding-left:calc(0.5rem) + 0.5rem;
-    }
-    .empty-message {
-        font-style: italic;
-        color: #888;
-    }
-    #soin-list {
-        list-style: none;
-        margin-top: 0.5rem;
-    }
-    #soin-list li {
-        display: flex;
-        justify-content: space-between;
-        padding: 0.25rem 0;
-        border-bottom: 1px solid #e5e5e5;
-    }
-    #soin-list li:last-child {
-       border-bottom: none;
-    }
-    .treatment-details {
-        flex: 1;
-    }
-    .treatment-actions {
-        display: flex;
-        align-items: center;
-    }
-    .treatment-price {
-        margin-right: 0.5rem;
-    }
-    .remove-treatment {
-        color: var(--danger);
-        background: none;
-        border: none;
-        cursor: poiner;
-        font-size: 0.9rem;
-        transition: opacity 0.3s;
-    }
-    .remove-treatment:hover {
-        opacity: 0.7;
-    }
+/*========================
+   CALENDRIER (JQUERY UI DATEPICKER)
+========================*/
+#booking-calendar {
+    margin-top: 1rem;
+    font-size: 2rem;
+    width: 100%;
+}
 
-    .recap-total {
-        margin-top: 1rem;
-        font-weight: 700;
-        text-align: right;
-        padding-top: 0.5rem;
-        border-top: 1px solid #e5e5e5;
+.ui-datepicker {
+    width: 100%;
+    padding: 0;
+    font-family: var(--font-body);
+    border-radius: var(--radius);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: none;
+}
+
+.ui-datepicker .ui-datepicker-header {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    padding: 1rem;
+    border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.ui-datepicker .ui-datepicker-title {
+    font-family: var(--font-main);
+    color: var(--white-color);
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+    cursor: pointer;
+}
+
+.ui-datepicker table {
+    margin: 0.5em auto;
+    width: 100%;
+}
+
+.ui-datepicker th {
+    font-weight: 600;
+    color: var(--tertiary-color);
+    padding: 1rem 0;
+}
+
+.ui-datepicker td {
+    padding: 5px;
+    height: 3rem;
+}
+
+.ui-datepicker td a {
+    text-align: center;
+    border-radius: 0.25rem;
+    transition: all 0.3s;
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.ui-datepicker td a.ui-state-default {
+    background: none;
+    border: 1px solid transparent;
+}
+
+.ui-datepicker td a.ui-state-active {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-color: var(--primary-color);
+    font-weight: bold;
+}
+
+.ui-datepicker td a.ui-state-hover {
+    background-color: #bfab96;
+    color: var(--white-color);
+}
+
+.ui-datepicker td a.ui-state-disabled {
+    opacity: 0.5;
+}
+
+/*========================
+   RÉCAPITULATIF
+========================*/
+.recap-item {
+    margin-bottom: 0.5rem;
+}
+
+.recap-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.25rem;
+    font-weight: 500;
+}
+
+.recap-header i {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+}
+
+.recap-content {
+    padding-left: calc(0.5rem + 0.5rem);
+}
+
+.empty-message {
+    font-style: italic;
+    color: #888;
+}
+
+#soin-list {
+    list-style: none;
+    margin-top: 0.5rem;
+    padding: 0;
+}
+
+#soin-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.25rem 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+#soin-list li:last-child {
+   border-bottom: none;
+}
+
+.treatment-details {
+    flex: 1;
+}
+
+.treatment-actions {
+    display: flex;
+    align-items: center;
+}
+
+.treatment-price {
+    margin-right: 0.5rem;
+}
+
+.remove-treatment {
+    color: var(--danger);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: opacity 0.3s;
+}
+
+.remove-treatment:hover {
+    opacity: 0.7;
+}
+
+.recap-total {
+    margin-top: 1rem;
+    font-weight: 700;
+    text-align: right;
+    padding-top: 0.5rem;
+    border-top: 1px solid #e5e5e5;
+}
+
+/*========================
+   BOUTONS SPÉCIFIQUES
+========================*/
+#add-soin, #confirm-booking {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#add-soin:hover, #confirm-booking:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+/*========================
+   ANIMATIONS
+========================*/
+.recap-content, .recap-item {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+/*========================
+   MESSAGES
+========================*/
+.success-message {
+    background-color: #ddffdd;
+    border: 1px solid #4CAF50;
+    padding: 10px;
+    margin-bottom: 15px;
+    color: #2e7d32;
+    border-radius: var(--radius);
+    text-align: center;
+}
+
+/*========================
+   RESPONSIVE
+========================*/
+@media (max-width: 768px) {
+    .container-booking {
+        flex-direction: column;
+        gap: 1rem;
     }
+}

@@ -1,5 +1,5 @@
 RewriteEngine On
-RewriteBase /SpaVita-equipe5/public/
+RewriteBase /spaVita/public/
 
 # Si le fichier ou le dossier demandé existe, on le sert directement
 RewriteCond %{REQUEST_FILENAME} !-f
