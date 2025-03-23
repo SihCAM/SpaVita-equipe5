@@ -41,14 +41,14 @@ $soinsParCategorie[$categorie] [] =$soin;
             <div class="soins-service-container">
                 <div class="service-soin-images">
                     <div class="service-soin-image">
-                        <img src="../public/assets/images/service1.jpg" alt="Massage relaxant">
+                        <img src="assets/images/service1.jpg" alt="Massage relaxant">
                     </div>      
                 </div>
                     <div class="service-soin-image">
-                        <img src="../public/assets/images/service2.jpg" alt="Massage relaxant">
+                        <img src="assets/images/service2.jpg" alt="Massage relaxant">
                     </div>
                     <div class="service-soin-image">
-                        <img src="../public/assets/images/service3.jpg" alt="Massage relaxant">
+                        <img src="assets/images/service3.jpg" alt="Massage relaxant">
                     </div>
                 </div>
     <div class="hero-soins-info">
@@ -97,7 +97,7 @@ $soinsParCategorie[$categorie] [] =$soin;
                 <div class="soin-card">
                     <!-- Image du soin -->
                     <div class="soin-card-img">
-                        <img src="../public/assets/images/<?= !empty($soin['image']) ? htmlspecialchars($soin['image']) : 'default.jpg' ?>" alt="<?= htmlspecialchars($soin['nom']) ?>">
+                        <img src="assets/images/<?= !empty($soin['image']) ? htmlspecialchars($soin['image']) : 'default.jpg' ?>" alt="<?= htmlspecialchars($soin['nom']) ?>">
                         <!--Overlay-->
                         <div class="soin-overlay">
                             <span class="soin-decouvrir">Découvrir</span>
@@ -128,7 +128,7 @@ $soinsParCategorie[$categorie] [] =$soin;
         <h2>Profitez de l'offre du mois</h2>
         <p>Un soin visage complet + Massage relaxant à 
             <span class="shine-text"> -30%</span></p>
-        <a href="SpaVita-equipe5/public/?page=reservations" class="btn-offre"> J'en profite</a>
+        <a href="index.php?page=reservations" class="btn-offre"> J'en profite</a>
     </div>
 </section>
 
