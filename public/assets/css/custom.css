@@ -1470,7 +1470,7 @@ to {
 .booking-recap {
     flex: 1;
     background-color: var(--white-color);
-    color: var(--white-color);
+    color: var(--secondary-color);
     padding: 20px;
     border-radius: var(--radius);
     transition: transform 0.3s ease;
@@ -1628,6 +1628,7 @@ textarea.input-field {
     align-items: center;
     margin-bottom: 0.25rem;
     font-weight: 500;
+    color: var(--secondary-color);
 }
 
 .recap-header i {
@@ -1637,6 +1638,7 @@ textarea.input-field {
 
 .recap-content {
     padding-left: calc(0.5rem + 0.5rem);
+    color: var(--tertiary-color);
 }
 
 .empty-message {
@@ -1648,6 +1650,7 @@ textarea.input-field {
     list-style: none;
     margin-top: 0.5rem;
     padding: 0;
+    color: var(--tertiary-color);
 }
 
 #soin-list li {
@@ -1659,6 +1662,10 @@ textarea.input-field {
 
 #soin-list li:last-child {
    border-bottom: none;
+}
+
+#soin-list .soin-details {
+    color: var(--tertiary-color);
 }
 
 .treatment-details {
@@ -1705,6 +1712,7 @@ textarea.input-field {
 #add-soin:hover, #confirm-booking:hover {
     background-color: var(--secondary-color);
     transform: translateY(-3px);
+    cursor: pointer;
 }
 
 /*========================

@@ -156,8 +156,8 @@ $(document).ready(function() {
 
                     treatmentsHTML += `
                     <li>
-                     <div class="soin-details">
-                            ${soin.nom} 
+                        <div class="soin-details">
+                            ${soin.nom}&nbsp;
                             <small>(${soin.quantity} ${soin.quantity > 1 ? 'personnes' : 'personne'})</small>
                         </div>
                         <div class="treatment-actions">
