@@ -1441,13 +1441,31 @@ to {
 /*----------------- PAGE RESERVATION---------------------*/
 /*Body position relative ?? Arevoir*/ 
     /*SMAIN BOOKING CONTAINER*/
-    .booking-container{ 
+
+    #calendar-section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;    
+    }
+
+    #booking-calendar {
+        width: 100%;
+        max-width: 2200px; 
+        display: flex;
+    }
+    .container-booking{
+        width: 100%;
+        padding: 1rem;
+    }
+    .booking-container{   
         display: flex;
         gap: 2rem;
-        margin-top:2rem;
+        margin-top: 2rem;
     }
     .booking-main {
         flex: 3;
+        width: 100%;
     }
     .booking-recap {
         flex: 1;
@@ -1458,6 +1476,7 @@ to {
         padding: 1.5rem;
         margin-bottom: 1rem;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 100%;
     }
     /*Form element*/
     .form-group {
@@ -1485,26 +1504,26 @@ to {
         cursor: not-allowed;
     }
     textarea.input-field {
-        MIN-HEIGHT: 100px;
+        min-height: 100px;
         resize: vertical;
     }
 
     /*Calendrier*/
     #booking-calendar {
         margin-top: 1rem;
-        font-size: 1.2rem;
+        font-size: 2rem;
     }
     .ui-datepicker {
         width: 100%;
         padding: 0;
-        font-family: var (--font-body);
+        font-family: var(--font-body);
         max-width: none;
     }
     .ui-datepicker .ui-datepicker-header {
         background-color: var(--primary-color);
         border: none;
         border-radius: 0.25rem 0.25rem 0 0;
-        padding: 1rem;
+        padding: 3rem;
     }
     .ui-datepicker .ui-datepicker-title {
         font-family: var(--font-main);
@@ -1544,7 +1563,7 @@ to {
         transition: all 0.3s;
         padding: 0.8rem;
         font-size: 1.1rem;
-        display: fmex;
+        display: flex;
         align-items: center;
         justify-content: center;
         height: 100%;

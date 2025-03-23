@@ -138,7 +138,7 @@ $(document).ready(function() {
                 const formattedDate = formatDateToFrench(selectionDate);
                 let dateTimeText = formattedDate;
                 if (selectionTime) {
-                    dateTimeText += ` à ${selectedTime}`;
+                    dateTimeText += ` à ${selectionTime}`;
                 }
                 $("#recap-datetime").html(`<p>${dateTimeText}</p>`);
             }else {
@@ -147,7 +147,7 @@ $(document).ready(function() {
 
             //MAJ des soins selectionnés
             if (selectionTreatments.length > 0) {
-                let treatmentsHTML = 'ul id="soin-list">';
+                let treatmentsHTML = '<ul id="soin-list">';
                 let totalPrice = 0;
 
                 selectionTreatments.forEach((soin, index) => {
@@ -160,16 +160,16 @@ $(document).ready(function() {
                             ${soin.nom} 
                             <small>(${soin.quantity} ${soin.quantity > 1 ? 'personnes' : 'personne'})</small>
                         </div>
-                        <div class="soin-actions">
-                            <span class="soin-prix">$(subtotal)€</span>
-                            <button class="remove-treatment" data-index="${index}"></button>
+                        <div class="treatment-actions">
+                            <span class="treatment-price">${subtotal}€</span>
+                            <button class="remove-treatment" data-index="${index}"><i class="fas fa-trash"></i></button>
                         </div>
                     </li>
                     `;
                 });
 
                 treatmentsHTML += '</ul>';
-                treatmentsHTML += `<div id="total-price"  class="recap-total">Total: $(totalPrice)€</div>`;
+                treatmentsHTML += `<div id="total-price"  class="recap-total">Total: ${totalPrice} €</div>`;
 
                 $("#recap-soin").html(treatmentsHTML);       
             } else {
@@ -184,8 +184,8 @@ $(document).ready(function() {
         function formatDateToFrench(date) {
             if (!date) return '';
 
-            const days = ["Dimanche", "Lundi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
-            const months = ["janvier", "février", "Mears", "avril", "mai", "juin","juillet", "août", "septembre", "octobre", "novembre", "decembre"];
+            const days = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
+            const months = ["janvier", "février", "Mars", "avril", "mai", "juin","juillet", "août", "septembre", "octobre", "novembre", "decembre"];
             const dayName = days[date.getDay()];
             const day = date.getDate();
             const month = months[date.getMonth()];

@@ -34,10 +34,15 @@ if (!isset($_SESSION['user'])) {
     </div>
 
 <!--Conteneur principal-->
-        <div class="booking-container">
-            <div class="booking-main">
-                <div class="booking-section" id="calendar-section">
+        <div class="container-booking">
+            <div class="booking-container">
+                <div class="booking-main"> 
+                    <!--calendrier-->
+                <div 
+                class="booking-section" id="calendar-section">
+
                     <h2>Choissisez une date</h2>
+
                     <div id="booking-calendar"></div>
                 </div>
 
@@ -103,7 +108,7 @@ if (!isset($_SESSION['user'])) {
                 <div id="recap-soin" class="recap-content">
                     <p class="empty-message">Aucun soin selectionné</p>
                     <ul id="soin-list"></ul>
-                    li
+                    
                     <div id="total-price" class="recap-total"></div>
                 </div>
             </div>
