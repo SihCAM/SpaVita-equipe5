@@ -14,56 +14,10 @@ $soinsParCategorie[$categorie] [] =$soin;
 }
 ?>
 
-<div class="container-soin-hero">
-    
-    <div class="spa-banner-soin">
-        <div class="main-soin-image-section">
-            
-            <div class="discount-container">
-                <div class="discount-box">
-                    <span class="discount-pourcentage">-30%</span>
-                    <span class="discount-text">OFF</span>
-                 <div class="discount-support"></div>   
-                </div>
-            </div>
-        
-    </div>
 
-        <!--Contenu de la bannière-->
-        <div class="soin-banner-content">
-                <h2 class="main-soin-title">Rechargez votre énergie</h2>
-                <div class="subtitle-line"></div>
-                <p class="subtitle">TRAITEMENT EXCLUSIF</p>
-                <div class="subtitle-line"></div>
-        </div>
-    </div>
-            <!--Conteneur des images de services-->
-            <div class="soins-service-container">
-                <div class="service-soin-images">
-                    <div class="service-soin-image">
-                        <img src="assets/images/service1.jpg" alt="Massage relaxant">
-                    </div>      
-                </div>
-                    <div class="service-soin-image">
-                        <img src="assets/images/service2.jpg" alt="Massage relaxant">
-                    </div>
-                    <div class="service-soin-image">
-                        <img src="assets/images/service3.jpg" alt="Massage relaxant">
-                    </div>
-                </div>
-    <div class="hero-soins-info">
-        <div class="hero-text-soin">
-             <p>Offrez-vous une parenthèse de sérénité et laissez-vous envelopper par nos soins apaisants. Une expérience de bien-être ultime vous attend.</p>
-        </div>
-         <div class="contact-soin-item">
-            <i class="fas fa-phone-alt"></i> 
-            <h3>Service client</h3>
-                 <span>Besoin d'aide pour choisir un soin ? Contactez notre équipe au<strong> 04 23 45 67 89</strong></span>
-        </div>
-    </div>
-    
-    </div>
-            
+
+
+
 
 <!--Section Soins-->
 <div class="heading">
@@ -80,6 +34,7 @@ $soinsParCategorie[$categorie] [] =$soin;
             <li><a href="#hydrotherapie" class="cat-link"><i class="fas fa-bath"></i><span>Hydrothérapie</span></a></li>
         </ul>
 </nav>
+
 
 <div class="soins-decouverte-container">
     <?php if (empty($soinsParCategorie)): ?>

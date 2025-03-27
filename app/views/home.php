@@ -5,26 +5,11 @@ include '../app/views/header.php';
 
 <!--Section hero-->
 <section class="hero">
+    <div class="hero-overlay"></div>
     <div class="hero-content">
         <h1>BEAUTY & SPA</h1>
         <p>Offrez-vous un moment de relaxation absolue dans notre spa situé entre Lac et Montagne</p>
-        <!--
-        <div class="hero-services">
-            <div class="service">
-                <span> Massages relaxants</span>
-            </div>
-        
-            <div class="service">
-                <span> Soins du visage</span>
-            </div>
-            <div class="service">
-                <span> Hammam & Sauna</span>
-            </div>
-            <div class="service">
-                <span> Expérience sensorielle</span>
-            </div>
-        </div>-->
-
+        <!--home-hero-buttons-->
         <div class="hero-buttons">
         <a href="index.php?page=soins" class="btn">Parcourir nos soins</a>
             <a href="index.php?page=reservations" class="btn">Réserver maintenant</a>
@@ -39,8 +24,8 @@ include '../app/views/header.php';
     <div class="presentation-container">
         <div class="presentation-text">
              <h2>Notre Histoire</h2>
-    <p>Niché entre lac et montagne, **SpaVita** est un danctuaire de bien être au coeur d'Annecy. Fondé en 2000, notre spa incarne l'harmonie entre la nature et la détente, offrant un refuge apaisant loin de l'agitatin quotidienne. <br> </p>
-    <p> Inspiré par les paysages majestueux d'Annecy, SpaVita vous invite à une **expérience sensorielle unique**. Laissez-vous envelopper par l'ambiance paisible et le luxe naturel de notre établissemnt.</p>
+    <p>Niché entre lac et montagne, <strong>SpaVita</strong> est un danctuaire de bien être au coeur d'Annecy. Fondé en 2000, notre spa incarne l'harmonie entre la nature et la détente, offrant un refuge apaisant loin de l'agitatin quotidienne. <br> </p>
+    <p> Inspiré par les paysages majestueux d'Annecy, SpaVita vous invite à une <strong>expérience sensorielle unique</strong>. Laissez-vous envelopper par l'ambiance paisible et le luxe naturel de notre établissemnt.</p>
         </div>
    
     <div class="separateur"></div> <!--ligne de séparation-->
@@ -48,10 +33,10 @@ include '../app/views/header.php';
     <div class="presentation-text">
         <h2>Un espace de Bien-être Unique</h2>
         <p>
-            Avec plus de **700m²** d'installations dédiées à la relaxation, SpaVita vous ouvre les portes d'un monde de sérénité. Profitez d'une **piscine intérieure chaufée** avec vue panoramique, d'un **hammam aux senteurs apaisantes**, et d'un **sauna aux pierres volcaniques**. 
+            Avec plus de <strong>700m²</strong> d'installations dédiées à la relaxation, SpaVita vous ouvre les portes d'un monde de sérénité. Profitez d'une **piscine intérieure chaufée** avec vue panoramique, d'un <strong>hammam aux senteurs apaisantes*</strong>, et d'un <strong>sauna aux pierres volcaniques</strong>. 
         </p>
         <p>
-            Nos cabines de soins vous acceuillent pour des **rituels relaxants**, avec des produits inspirés des rihesses alpines. Que ce soit pour un massage aux huiles essentielles, un soin de beauté ou une pause détente dans notre solarium, chaque instant à SpaVita est une invitation à l'évasion.
+            Nos cabines de soins vous acceuillent pour des <strong>rituels relaxants</strong>, avec des produits inspirés des rihesses alpines. Que ce soit pour un massage aux huiles essentielles, un soin de beauté ou une pause détente dans notre solarium, chaque instant à SpaVita est une invitation à l'évasion.
         </p>
     </div>
 </div>
@@ -181,6 +166,194 @@ include '../app/views/header.php';
         </div>
 </section>
 
+<!--SECTION PRATIICENS-->
+<div class="praticiens-grid">
+
+    <div class="praticien-card">
+        <div class="praticien-image">
+            <img src="assets/images/praticiens/praticien1.jpg" alt ="premier praticien">
+        </div>
+        <div class="praticien-info">
+            <h3>Sarah Lebon</h3>
+            <span class="praticien-title">Masseuse Certifiée</span>
+            <p>Spécialiste des massages relaxants et thérapeutiques avec plus de 10ans expérience</p>
+            <div class="praticien-skills">
+                <i class="fas fa-check-circle">Massage relaxant</i> 
+                <i class="fas fa-check-circle">Massage aux pierres chaudes</i> 
+            </div>
+        </div>
+
+    <!--Bio cachée, s'affiche au survol-->
+        <div class="praticien-overlay">
+            <p>Sarah a acquis son expertise Thaïlande, puis a perfectionné ses techniques en Suisse. Ses clients apprécient son approche douce et personnalisée</p>
+        </div>
+    </div>
+
+        <div class="praticien-card">
+        <div class="praticien-image">
+            <img src="assets/images/praticiens/praticien2.jpg" alt ="deuxième praticien">
+        </div>
+        <div class="praticien-info">
+            <h3>Lucas Ferre</h3>
+            <span class="praticien-title">Thérapeute bien-être</span>
+            <p>Ancien kinésithérapeute reconverti dans les soins de bien-être global à Annecy </p>
+            <div class="praticien-skills">
+                <i class="fas fa-check-circle">Réflexologie</i> 
+                <i class="fas fa-check-circle">Massage sportif</i> 
+            </div>
+        </div>
+   
+        <div class="praticien-overlay">
+            <p>Lucas s'est formé dans les Alpes suisses; Il adpate chaque séance selon la morphologie et le rythme du client.</p>
+        </div>
+    </div>
+
+        <div class="praticien-card">
+        <div class="praticien-image">
+            <img src="assets/images/praticiens/praticien3.jpg" alt ="troisième praticien">
+        </div>
+        <div class="praticien-info">
+            <h3>Claire Dubois</h3>
+            <span class="praticien-title">Esthéticienne</span>
+            <p>Experte en soisn du visage bio et rituels beauté inspirés des Alpes</p>
+            <div class="praticien-skills">
+                <i class="fas fa-check-circle">Soins visage</i> 
+                <i class="fas fa-check-circle">Rituels aux plantes alpines</i> 
+            </div>
+    </div>
+        <div class="praticien-overlay">
+            <p>Claire participe à une sélectionne minitieuse des plantes locales pour offir le meilleur des masques. Elle est apréciée pour sa douceur et son sens du détail.</p>
+        </div>
+    </div>
+
+    <div class="praticien-card">
+        <div class="praticien-image">
+            <img src="assets/images/praticiens/praticien4.jpg" alt ="premier praticien">
+        </div>
+        <div class="praticien-info">
+            <h3>Julien Buy</h3>
+            <span class="praticien-title">Hydrothérapeute</span>
+            <p>Maîtrise des techniques de relaxation par l'eau et les bains aromatiques.</p>
+            <div class="praticien-skills">
+                <i class="fas fa-check-circle">Hydrothérapie</i> 
+                <i class="fas fa-check-circle">Bain aux huiles essentielles</i> 
+            </div>
+    </div>
+        <div class="praticien-overlay">
+            <p>Julien a étiidié en Autriche. Il crée des ambiances sonores et olfactives uniques pendant chaque bain.</p>
+        </div>
+    </div>
+
+    <div class="praticien-card">
+        <div class="praticien-image">
+            <img src="assets/images/praticiens/praticien5.jpg" alt ="cinquième praticien">
+        </div>
+        <div class="praticien-info">
+            <h3>Amélie Rousset</h3>
+            <span class="praticien-title">Spécialiste hammam</span>
+            <p>Crétrice de rituels sensoriels et experte des traditions orientales.</p>
+            <div class="praticien-skills">
+                <i class="fas fa-check-circle">Hammam</i> 
+                <i class="fas fa-check-circle">Gommage au savon noir</i> 
+            </div>
+        </div>
+        <div class="praticien-overlay">
+            <p>Amélie a été formée à Marrakech. Sa gestuelle fluide et enveloppante est plébiscitée par les habitués.</p>
+        </div>
+    </div>
+
+    <div class="praticien-card">
+        <div class="praticien-image">
+            <img src="assets/images/praticiens/praticien6.jpg" alt ="sixième praticien">
+        </div>
+        <div class="praticien-info">
+            <h3>Nicolas betin</h3>
+            <span class="praticien-title">Coach de respiration</span>
+            <p>Accompagnement du stress par la respiration et les techniuques de pleine conscience.</p>
+            <div class="praticien-skills">
+                <i class="fas fa-check-circle">Respiration consciente</i> 
+                <i class="fas fa-check-circle">Relaxation guidée</i> 
+            </div>
+    </div>
+        <div class="praticien-overlay">
+            <p>JNicolas a traviallé avec des alpinnistes et des plongeurs en apnée. Il est réputé pour sa voix apaisante</p>
+        </div>
+    </div>
+
+    <div class="praticien-card">
+        <div class="praticien-image">
+            <img src="assets/images/praticien7.jpg" alt ="septième praticien">
+        </div>
+        <div class="praticien-info">
+            <h3>Elena Garcia</h3>
+            <span class="praticien-title">Thérapeute holistique</span>
+            <p>Approche global du corps et de l'esprit inspirée par la nature.</p>
+            <div class="praticien-skills">
+                <i class="fas fa-check-circle">Aromathérapie</i> 
+                <i class="fas fa-check-circle">Reiki</i> 
+            </div>
+    </div>
+        <div class="praticien-overlay">
+            <p>Elena utilise les plantes en provenance du massif des Bauges et propose des soins énergétiques en lien avec les cycles lunaires</p>
+        </div>
+    </div>
+
+    <div class="praticien-card">
+        <div class="praticien-image">
+            <img src="assets/images/praticiens/praticien8.jpg" alt ="huitième praticien">
+        </div>
+        <div class="praticien-info">
+            <h3>Thomas Vidal</h3>
+            <span class="praticien-title">Spécialiste jacuzzi</span>
+            <p>Expérience immersive et relaxante dans nos jacuzzis intérieurs et extérieurs.</p>
+            <div class="praticien-skills">
+                <i class="fas fa-check-circle">Jaccuzzi extérieur</i> 
+                <i class="fas fa-check-circle">Relaxation sensorielle</i> 
+            </div>
+        </div>
+        <div class="praticien-overlay">
+            <p>Thomas coordonne des séances sur mesure avec lumière, sons et huiles essentilelles.</p>
+        </div>
+    </div>
+
+    <div class="praticien-card">
+        <div class="praticien-image">
+            <img src="assets/images/praticiens/praticien9.jpg" alt ="neuvième praticien">
+        </div>
+        <div class="praticien-info">
+            <h3>Héloïse Martel</h3>
+            <span class="praticien-title">Experte en soin s du corps</span>
+            <p>Héloïse allie douceur et téchnicité pour détendre les tensions musculaires profondes.</p>
+            <div class="praticien-skills">
+                <i class="fas fa-check-circle">enveloppements</i> 
+                <i class="fas fa-check-circle">Drainage lymphatique</i> 
+            </div>
+        </div>
+        <div class="praticien-overlay">
+            <p>Formée à Annecy et lyon, Julie est saluée pour sa précision et sa bienveillance naturelle.</p>
+        </div>
+    </div>
+
+    <div class="praticien-card">
+        <div class="praticien-image">
+            <img src="assets/images/praticiens/praticien10.jpg" alt ="dixième praticien">
+        </div>
+        <div class="praticien-info">
+            <h3>Isabelle Chardon</h3>
+            <span class="praticien-title">Naturopathe & coach bien -être</span>
+            <p>Accompagnement global avec plantes, nutrition et soins de relaxation naturelle.</p>
+            <div class="praticien-skills">
+                <i class="fas fa-check-circle">Conseils en phytothérapie</i> 
+                <i class="fas fa-check-circle">Massages aux huuiles bio</i> 
+            </div>
+        </div>
+        <div class="praticien-overlay">
+            <p>Originaire de la région d'Annecy, Isabelle valorise les produits locaux et accompagne chaque client versun équilibre  durable.</p>
+        </div>
+    </div>
+        
+ 
+ </div>
 
 <!--Section Contact-->
 <section class="contact" id="contact">
@@ -223,6 +396,7 @@ include '../app/views/header.php';
             </form>
         </div>
     </div>
+   </div>
 </div>
 </section>
 

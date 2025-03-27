@@ -602,15 +602,128 @@ box-shadow:0 15px 30px rgba(0, 0, 0, 0.1);
     color: var(--white-color);
 }
 
-/*
-.container-services-prestations p {
-    max-width: 600px;
-   justify-content: center;
-    margin: auto;
-    font-size: 18px;
-    color: var(--tertiary-color);
+/*SECTION PRATICIEN*/
+.praticiens-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem 1rem;
+}
+.praticien-card {
+    position: relative;
+    width: calc(20%- 16px);
+    max-width: 220px;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: var(--white-color);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.praticien-card:hover {
+    transform: translateY(-8px);
+}
+.praticien-card:hover {
+    transform: translateY(-10px);
+}
+.praticien-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
+}
+.praticien-card:hover .praticien-image img {
+    transform: scale(1.05);
+}
+.praticien-info {
+    padding: 20px;
+    text-align: 20px;
+    background-color: var(--white-color);
+    z-index: 1;
+    position: relative;
+}
+.praticien-info h3 {
+    font-size: 20px;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+}
+.praticien-title {
+    display: block;
+    font-size: 15px;
+    color: var(--primary-color);
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.praticien-info p {
+    font-style: var(--font-body);
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
     line-height: 1.6;
-}*/
+}
+
+.praticien-skills {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 14px;
+    color: var(--secondary-color);
+    margin-top: 10px;
+}
+
+.praticien-skills i{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.praticien-overlay {
+    position: absolute;
+    background-color: rgba(92, 64, 51, 0.9);/*Marron overlay*/
+    color: var(--white-color);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    z-index: 2;
+    border-radius: 8px;
+    transform: translateY(20px);
+}
+
+.praticien-card:hover .praticien-overlay {
+opacity: 1;
+pointer-events: auto;
+transform: translateY(0);
+animation: slideUpFade 0.5s ease-out forwards;
+}
+.praticien-overlay p{
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/*Responsive ajustements */
+@media screen and (max-width: 768px) {
+    .praticien-info {
+        padding: 15px
+    }
+    .praticien-skills {
+        font-size: 13px;
+    }
+    .praticien-overlay p {
+        font-size: 14px;
+    }
+}
 
 
 /*SECTION CONTACT*/
@@ -667,355 +780,7 @@ box-shadow:0 15px 30px rgba(0, 0, 0, 0.1);
 
 
 
-/*-------------- PAGE SOIN -----------------------*/
-    /*SECTION BANNIERE*/
-.container-soin-hero {
-    width: 100%;
-   max-width: 100%;
-   background-color: var(--primary-color);
-   text-align: center;
-}
 
-
-.spa-banner-soin {
-    position: relative;
-    padding: 10px;
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-    border-radius: 0.5rem;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);   
-}
-
-.spa-banner-soin.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/*Top section*/
-/**/
-.main-title {
-    color:var(--secondary-color);
-    font-family: var(--font-main);
-    font-size: 2.25rem;
-    letter-spacing: 0.05em;
-    margin-top: 1.5rem;
-    margin-bottom: 0.25rem;
-    opacity: 0;
-    transform: translateY(4px);
-    transition: all 0.7s ease-in-out 0.7s;
-}
-.spa-banner-soin.vsible .main-title {
-    opacity: 1;
-    transform: translateY(0);
-}
-.subtitle-container {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-    opacity: 0;
-    transform: translateY(4px);
-    transition: all 0.7s ease-in-out 0.9s;
-}
-.spa-banner-soin.visible .subtitle-container {
-    opacity: 1;
-    transform: translateY(0);
-}
-.subtitle-line {
-    width: 2rem;
-    height: 1px;
-    background-color: var(--white-color);
-}
-.subtitle {
-    color: var(--white-color);
-    font-size: 1.125rem;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-/*Main image section*/
-.main-soin-image-section {
-    position: relative;
-    width: 100%;
-    height: 580px;
-    background-image: url('../../assets/images/soin-hero.jpg');
-    background-color: var(--secondary-color);
-   background-blend-mode: overlay;
-    background-size: cover;
-    background-position: center;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/*Effet overlay*/
-.main-soin-image-section::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-color:rgba(0, 0, 0, 0.3);
-}
-
-/*Contenu de la bannière */
-
-.soin-banner-content {
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: var(--white-color);
-}
-.main-soin-title {
-    font-family: var(font-main);
-    color: var(--white-color);
-    justify-self: center;
-    font-size: 60px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    margin-left: 20%;
-    margin-bottom:10px;
-}
-.subtitle{
-    font-size: 1.2rem;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-/*Discount Box*/
-.discount-container {
-     position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index:5;
-}
-.discount-box {
-    background-color: var(--secondary-color);
-    color: var(--white-color);
-    padding: 15px;
-    width: 250px;
-    height:200px;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    border:4px solid var(--white-color);
-}
-
-.discount-pourcentage {
-    font-size: 4rem;
-    font-weight: bold;
-}
-.discount-text {
-    font-size: 2rem;
-}
-.discount-support{
-    padding-left: 30px;
-    width: 150;
-    height: 320px;
-    border:2px solid var(--white-color);
-}
-
-/*Service-section*/
-.soins-service-container{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: -180px; /*Monte legèrement les images pour chevaucher la bannière*/
-    z-index:10;
-    position: relative;
-}
-
-.service-soin-images {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.service-soin-image img{
-    width: 240px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px;
-    border: 3px solid var(--white-color);
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-}
-
- 
- /*Info-section*/
- .info-soin-section {
-    background-color: #f8f5f1;
-    padding: 3rem;
-   border-radius: 10px;
-   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
- }
-
-/*Hero info */
-.hero-soins-info{
-    display: flex;
-    /*display: grid;
-    grid-template-columns: repeat(2, 1fr);*/
-    
-    align-items: center;
-    gap: 50px;
-    max-width: 1000px;
-    text-align: center;
-}
-.hero-text-soin, .contact-soin-item{
-    flex: 1 1 45%;
-    background-color: var(--primary-color);
-    justify-content: center;
-   
-}
-.hero-text-soin p{
-    font-size:1.2rem;
-    line-height: 1.8;
-    color: var(--tertiary-color);
-    padding-left: 20px;
-}
-.contact-soin-item h3 {
-    margin-bottom: 10px;
-    font-size: 1.5rem;
-    color: var(--tertiary-color)
-}
-.contact-soin-item i{
-    font-size: 2.5rem;
-}
-.contact-soin-item span {
-    font-size: 1rem;
-    color: var(--tertiary-color);
-}
-    /*section en deux colonne*/
-    .info-soin-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 30px;
-        justify-content: space-between;
-        align-items: start;
-        gap: 20px;
-    }
-    .soin-description {
-        flex:1;
-        width: 40%;
-        font-size: 1.1rem;
-        color: #666;
-    }
-
-    .services-soin {
-        flex:1;
-       max-width: 55%;
-       display: flex;
-       justify-content: space-between;
-    }
-   
-/*Deux colonnes pour la liste des servcies*/
-.services-soin-column {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 48%;
-}
-.service-soin-item {
-    display: flex;
-    align-items: center;
-    font-size: 1rem;
-    font-weight: 500;
-    background: var(--white-color);
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-.service-soin-item:hover {
-    transform: scale(1.05);
-}
-.service-soin-icon {
-    color: var(--secondary-color);
-    font-size: 1.5rem;
-    margin-right: 10px;
-}
-    @media (min-width: 768px) {
-        .info-soin-grid {
-            grid-template-columns: 1fr 1fr;
-        }
-    }
-     .info-soin-section h2 {
-        color: var(--secondary-color);
-        font-size: 1.875rem;
-        margin-bottom: 0.5rem;
-    }
-    .description-soin p {
-        color: var(--tertiary-color);
-        margin-bottom: 2rem;
-    }
-    .services-soin {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-    }
-    .service-soin-item {
-        display:flex;
-        align-items:flex-start;
-        gap:0.5rem;
-        margin-bottom:0.5rem;
-    }
-    .service-soin-icon {
-        color: var(--secondary-color);
-        font-size: 1.5rem;
-        margin-top: 0.5rem;
-    }
-    /*Contact information*/
-    .contact-soin-info {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1.5rem;
-        margin-top:2rem;
-        color: var(--tertiary-color);
-    }
-    .contact-soin-item {
-        display: flex;
-        gap: 0.5rem;
-        align-items: center;
-    }
-    .contact-soin-icon {
-        color: var(--secondary-color);
-        font-size: 1.5rem;
-    }
-         /*Responsive ajustement */
-    @media (min-width: 640px) {
-        .service-soin-images {
-            flex-direction:column;
-            align-items: center;
-            bottom: -24rem;
-        }
-        .service-soin-image {
-            width: 100%;
-            max-width: 300px;
-        }
-        .info-soin-section {
-            padding-top: 25rem;
-        }
-        .services-soin {
-            grid-template-columns: 1fr;
-        }
-        .contact-soin-info {
-            flex-direction: column;
-            align-items: center;
-        }
-    }
-
-    @media(min-width: 641px) and (max-width: 768px) {
-        .service-soin-images {
-            bottom: -12rem;
-        }
-        .info-soin-section {
-            padding-top: 13rem;
-        }
-    }
 
 /*NAVIGATION ANCRE DES SOINS*/
 .soin-navigation {
