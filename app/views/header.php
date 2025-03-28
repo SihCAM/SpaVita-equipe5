@@ -59,6 +59,7 @@ if (isset($_SESSION['error'])): ?>
                     <li><a href="index.php?page=home">Accueil</a></li>
                     <li><a href="index.php?page=soins">Nos Soins</a></li>
                     <li><a href="index.php?page=reservations">Réservations</a></li>
+                    <li><a href="index.php?page=contact">Contact</a></li>
                 </ul>
             </div>
 

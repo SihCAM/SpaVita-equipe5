@@ -24,7 +24,7 @@ include '../app/views/header.php';
     <div class="presentation-container">
         <div class="presentation-text">
              <h2>Notre Histoire</h2>
-    <p>Niché entre lac et montagne, <strong>SpaVita</strong> est un danctuaire de bien être au coeur d'Annecy. Fondé en 2000, notre spa incarne l'harmonie entre la nature et la détente, offrant un refuge apaisant loin de l'agitatin quotidienne. <br> </p>
+    <p>Niché entre lac et montagne, <strong>SpaVita</strong> est un sanctuaire de bien être au coeur d'Annecy. Fondé en 2000, notre spa incarne l'harmonie entre la nature et la détente, offrant un refuge apaisant loin de l'agitation quotidienne. <br> </p>
     <p> Inspiré par les paysages majestueux d'Annecy, SpaVita vous invite à une <strong>expérience sensorielle unique</strong>. Laissez-vous envelopper par l'ambiance paisible et le luxe naturel de notre établissemnt.</p>
         </div>
    
@@ -33,7 +33,7 @@ include '../app/views/header.php';
     <div class="presentation-text">
         <h2>Un espace de Bien-être Unique</h2>
         <p>
-            Avec plus de <strong>700m²</strong> d'installations dédiées à la relaxation, SpaVita vous ouvre les portes d'un monde de sérénité. Profitez d'une **piscine intérieure chaufée** avec vue panoramique, d'un <strong>hammam aux senteurs apaisantes*</strong>, et d'un <strong>sauna aux pierres volcaniques</strong>. 
+            Avec plus de <strong>700m²</strong> d'installations dédiées à la relaxation, SpaVita vous ouvre les portes d'un monde de sérénité. Profitez d'une <strong>piscine intérieure chaufée</strong> avec vue panoramique, d'un <strong>hammam aux senteurs apaisantes</strong>, et d'un <strong>sauna aux pierres volcaniques</strong>. 
         </p>
         <p>
             Nos cabines de soins vous acceuillent pour des <strong>rituels relaxants</strong>, avec des produits inspirés des rihesses alpines. Que ce soit pour un massage aux huiles essentielles, un soin de beauté ou une pause détente dans notre solarium, chaque instant à SpaVita est une invitation à l'évasion.

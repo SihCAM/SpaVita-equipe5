@@ -43,6 +43,10 @@ switch ($page) {
         $controller->logout();
         break;
 
+        case 'contact':
+            require '../app/views/contact.php';
+            break;
+
     default:
         echo "Page introuvable";
         break;
