@@ -1,5 +1,5 @@
-# htaccess actuel pour o2switch
+# htaccess actuel pour local
 RewriteEngine On
-# Rediriger toutes les requêtes vers le dossier public
-RewriteCond %{REQUEST_URI} !^/SpaVita/public/
+# Rediriger tout vers le dossier public si on n’y est pas déjà
+RewriteCond %{REQUEST_URI} !^/SpaVita-equipe5/public/
 RewriteRule ^(.*)$ public/$1 [L]

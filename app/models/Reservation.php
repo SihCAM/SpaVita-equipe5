@@ -36,4 +36,16 @@ class Reservation {
         $stmt->execute([$user_id]);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    public function getSoinsByReservation($reservation_id) {
+        $stmt = $this->pdo->prepare("
+            SELECT s.nom, s.prix, s.duree
+            FROM reservation_soins rs
+            JOIN soins s ON rs.soin_id = s.id
+            WHERE rs.reservation_id = ?
+        ");
+        $stmt->execute([$reservation_id]);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+    
 }

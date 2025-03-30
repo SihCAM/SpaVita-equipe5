@@ -58,5 +58,12 @@ switch ($page) {
     default:
         echo "Page introuvable";
         break;
+
+    case 'compte':
+        require_once '../app/controllers/CompteController.php';
+        $controller = new CompteController();
+        $controller->afficherCompte();
+        break;
+        
 }
 ?>

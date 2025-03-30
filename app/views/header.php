@@ -24,44 +24,38 @@ if (isset($_SESSION['error'])): ?>
 
 <!DOCTYPE html>
 <html lang="fr">
+<?php
+$base = (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false) ? '/SpaVita-equipe5/public/' : '/SpaVita/';
+?>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="SpaVita - Réservez facilement vos soins bien-être dans notre spa moderne. Massages, soins du visage et rituels relaxants.">
-    <meta name="keywords" content="Spa, bien-être, massage, soin visage, hammam, réservation en ligne">
-    <meta name="author" content="SpaVita Équipe 5">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SpaVita - Réservez facilement vos soins bien-être dans notre spa moderne.">
+  <meta name="keywords" content="Spa, bien-être, massage, soin visage, hammam, réservation en ligne">
+  <meta name="author" content="SpaVita Équipe 5">
 
-    <title>SpaVita - Beauté & Soin</title>
+  <title>SpaVita - Beauté & Soin</title>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="<?= (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false) ? '/' : '/SpaVita/' ?>assets/images/favicon.ico">
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="<?= $base ?>assets/images/favicon.ico">
 
-    <!-- Préconnexion pour Google Fonts (performance) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="<?= $base ?>assets/css/style.css">
+  <link rel="stylesheet" href="<?= $base ?>assets/css/custom.css">
+  <link rel="stylesheet" href="<?= $base ?>assets/librairies/jquery-ui/jquery-ui.min.css">
 
-    <?php
-    $folder = basename(dirname(__DIR__)); // SpaVita ou SpaVita-equipe5
-    $base = (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false) ? "/$folder/" : '/SpaVita/';
-    ?>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="<?= $base ?>assets/css/style.css">
-    <link rel="stylesheet" href="<?= $base ?>assets/css/custom.css">
-    <link rel="stylesheet" href="<?= $base ?>assets/librairies/jquery-ui/jquery-ui.min.css">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-    <!-- JS (jQuery & jQuery UI) -->
-    <script src="<?= $base ?>assets/librairies/jquery/jquery.min.js"></script>
-    <script src="<?= $base ?>assets/librairies/jquery-ui/jquery-ui.min.js"></script>
-
-    <!-- JS principal -->
-    <script defer src="<?= $base ?>assets/js/main.js"></script>
+  <!-- JS -->
+  <script src="<?= $base ?>assets/librairies/jquery/jquery.min.js"></script>
+  <script src="<?= $base ?>assets/librairies/jquery-ui/jquery-ui.min.js"></script>
+  <script defer src="<?= $base ?>assets/js/main.js"></script>
 </head>
 <body>
 
@@ -88,7 +82,9 @@ if (isset($_SESSION['error'])): ?>
             <div class="right-menu">
                 <ul>
                     <?php if (isset($_SESSION['user'])): ?>
-                        <li><?= $greeting ?>, <?= htmlspecialchars($_SESSION['user']['name']) ?></li>
+                        <li>
+                            <?= $greeting ?>, <a href="index.php?page=compte"><?= htmlspecialchars($_SESSION['user']['name']) ?></a>
+                        </li>
                         <li><a href="index.php?page=logout">Se déconnecter</a></li>
                     <?php else: ?>
                         <li><a href="index.php?page=login">Se connecter</a></li>
