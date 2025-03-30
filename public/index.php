@@ -1,6 +1,10 @@
 <?php
 session_start();
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 // Inclusion des contrôleurs
 require_once '../app/controllers/SoinController.php';
 require_once '../app/controllers/ReservationController.php';
@@ -43,9 +47,13 @@ switch ($page) {
         $controller->logout();
         break;
 
-        case 'contact':
-            require '../app/views/contact.php';
-            break;
+    case 'confirmation':
+        require '../app/views/confirmation.php';
+        break;        
+            
+    case 'contact':
+        require '../app/views/contact.php';
+        break;
 
     default:
         echo "Page introuvable";

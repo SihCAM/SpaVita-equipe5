@@ -27,20 +27,40 @@ if (isset($_SESSION['error'])): ?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SpaVita</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"> 
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/custom.css">
+    <meta name="description" content="SpaVita - Réservez facilement vos soins bien-être dans notre spa moderne. Massages, soins du visage et rituels relaxants.">
+    <meta name="keywords" content="Spa, bien-être, massage, soin visage, hammam, réservation en ligne">
+    <meta name="author" content="SpaVita Équipe 5">
+
+    <title>SpaVita - Beauté & Soin</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="<?= (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false) ? '/' : '/SpaVita/' ?>assets/images/favicon.ico">
+
+    <!-- Préconnexion pour Google Fonts (performance) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <!--jquery-->
-    <script src="assets/librairies/jquery/jquery.min.js"></script>
 
-    <!--jquery-ui-->
-    <link rel="stylesheet" href="assets/librairies/jquery-ui/jquery-ui.min.css">
-    <script src="assets/librairies/jquery-ui/jquery-ui.min.js"></script>
+    <?php
+    $base = (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false) ? '/' : '/SpaVita/';
+    ?>
 
-    <!--main.js-->
-    <script defer src="assets/js/main.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="<?= $base ?>assets/css/style.css">
+    <link rel="stylesheet" href="<?= $base ?>assets/css/custom.css">
+    <link rel="stylesheet" href="<?= $base ?>assets/librairies/jquery-ui/jquery-ui.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- JS (jQuery & jQuery UI) -->
+    <script src="<?= $base ?>assets/librairies/jquery/jquery.min.js"></script>
+    <script src="<?= $base ?>assets/librairies/jquery-ui/jquery-ui.min.js"></script>
+
+    <!-- JS principal -->
+    <script defer src="<?= $base ?>assets/js/main.js"></script>
 </head>
 <body>
 

@@ -113,24 +113,32 @@ $(document).ready(function() {
 
             }
             
-        });
+        })
 
-        //Gérer la conformation de la reservation
+        $("#confirm-booking").on("click", function (e) {
+            e.preventDefault(); // Empêche le comportement par défaut
         
-        $("#confirm-booking").on("click", function() {
+            // Vérification
+            if (selectionTreatments.length === 0 || !selectionDate || !selectionTime) {
+                alert("Veuillez sélectionner une date, une heure et au moins un soin.");
+                return;
+            }
+        
+            // Ajouter les soins sélectionnés au formulaire
+            $("#soins-container").empty(); // Vide les anciens champs cachés
+            selectionTreatments.forEach(t => {
+                $("#soins-container").append(`<input type="hidden" name="soins[]" value="${t.id}">`);
+            });
+        
+            // Ajouter la date et l'heure au champ caché
+            const dateFormatted = `${selectionDate.getFullYear()}-${String(selectionDate.getMonth() + 1).padStart(2, '0')}-${String(selectionDate.getDate()).padStart(2, '0')} ${selectionTime}`;
+            $("#hidden-date").val(dateFormatted);
+        
+            // Envoie le formulaire vers ReservationController
+            $("#form-reservation").submit();
+        });        
 
-            //!!!!!!A voir et adapter pour la suite si envoi d'email??
-
-            const bookingData = {
-                date: selectionDate,
-                time: selectionTime,
-                soins: selectionTreatments,
-                comments: $("comment").val()
-            };
-            console.log("Données de réservation:", bookingData);
-        });
-
-
+        
         //Fonction pour MAJ le recap
         function updateSummary () {
             //MAJ date et heure

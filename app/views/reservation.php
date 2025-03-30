@@ -92,6 +92,12 @@ if (!isset($_SESSION['user'])) {
                     <label for="commentaire">Commentaires ou demandes spéciales</label>
                     <textarea id="commentaire" class="input-field"></textarea>
                 </div>
+
+                <form id="form-reservation" method="POST" action="index.php?page=reservations">
+                    <input type="hidden" id="hidden-date" name="date" value="">
+                    <div id="soins-container"></div>
+                </form>
+
                 <button id="confirm-booking" class="button-primary button-large" disabled>
                     Confirmer la réservation
                 </button>

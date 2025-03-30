@@ -41,7 +41,6 @@ class UserController {
                 $user = $this->model->getUserByEmail($email);
 
                 if ($user && password_verify($password, $user['password'])) {
-                    session_start();
                     $_SESSION['user'] = $user;
                     header('Location: index.php?page=home');
                     exit;
