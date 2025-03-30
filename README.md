@@ -118,4 +118,25 @@ cd SpaVita-equipe5
 
 ---
 
+
+Informatiosn techniques : 
+
+.htaccess local :
+```bash
+# htaccess actuel pour local
+RewriteEngine On
+# Rediriger tout vers le dossier public si on n’y est pas déjà
+RewriteCond %{REQUEST_URI} !^/SpaVita-equipe5/public/
+RewriteRule ^(.*)$ public/$1 [L]
+```
+
+.htaccess o2switch :
+```bash
+# htaccess actuel pour o2switch
+RewriteEngine On
+# Rediriger tout vers le dossier public si on n’y est pas déjà
+RewriteCond %{REQUEST_URI} !^/SpaVita/public/
+RewriteRule ^(.*)$ public/$1 [L]
+
+```
 © 2025 SpaVita - Tous droits réservés

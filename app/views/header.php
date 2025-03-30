@@ -44,7 +44,8 @@ if (isset($_SESSION['error'])): ?>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
     <?php
-    $base = (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false) ? '/' : '/SpaVita/';
+    $folder = basename(dirname(__DIR__)); // SpaVita ou SpaVita-equipe5
+    $base = (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false) ? "/$folder/" : '/SpaVita/';
     ?>
 
     <!-- CSS -->
