@@ -288,7 +288,7 @@ include '../app/views/header.php';
 
     <div class="praticien-card">
         <div class="praticien-image">
-            <img src="assets/images/praticien7.jpg" alt ="septième praticien">
+            <img src="assets/images/praticiens/praticien7.jpg" alt ="septième praticien">
         </div>
         <div class="praticien-info">
             <h3>Elena Garcia</h3>
