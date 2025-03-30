@@ -1634,3 +1634,111 @@ Post confirmation Reservation
     background-color: var(--secondary-color);
     border: 2px solid var(--secondary-color)
 }
+
+/* ===== COMPTE UTILISATEUR ===== */
+
+.account-container {
+    padding: 2rem;
+    background-color: var(--white-color);
+}
+
+.account-title {
+    text-align: center;
+    font-family: var(--font-main);
+    color: var(--tertiary-color);
+    margin-bottom: 2rem;
+}
+
+.account-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.account-profile {
+    flex: 1;
+    background-color: var(--white-color);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.avatar-placeholder {
+    font-size: 4rem;
+    color: var(--primary-color);
+}
+
+.user-info p {
+    margin: 0.5rem 0;
+    font-family: var(--font-body);
+    color: var(--tertiary-color);
+}
+
+.account-reservations {
+    flex: 2;
+    background-color: var(--white-color);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.reservation-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.reservation-item {
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 0;
+}
+
+.soins-list {
+    margin: 0.5rem 0 0 1rem;
+    list-style-type: disc;
+    color: var(--tertiary-color);
+}
+
+.no-reservation {
+    font-style: italic;
+    color: #777;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .account-content {
+        flex-direction: column;
+    }
+}
+
+.compte-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px auto;
+    max-width: 1100px;
+    flex-wrap: wrap;
+}
+
+.compte-card {
+    background-color: var(--white-color);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 30px;
+    width: 500px;
+}
+
+.compte-card h2 {
+    font-family: var(--font-main);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.avatar {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
