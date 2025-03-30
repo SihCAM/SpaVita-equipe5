@@ -7,7 +7,7 @@
         <p>Un e-mail de confirmation vient de vous être envoyé à votre adresse.</p>
         <div class="confirmation-buttons">
             <a href="index.php?page=home" class="btn btn-secondary" id="btn-conf-home">Accueil</a>
-            <a href="index.php?page=mes_reservations" class="btn btn">Voir mes réservations</a>
+            <a href="index.php?page=compte" class="btn btn">Voir mes réservations</a>
         </div>
 
     </div>

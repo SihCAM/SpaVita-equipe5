@@ -16,9 +16,9 @@ class CompteController {
         $reservations = $reservationModel->getReservationsByUser($user_id);
 
         // Ajouter les soins à chaque réservation
-        foreach ($reservations as &$reservation) {
-            $reservation['soins'] = $reservationModel->getSoinsByReservation($reservation['id']);
-        }
+        foreach ($reservations as $index => $reservation) {
+            $reservations[$index]['soins'] = $reservationModel->getSoinsByReservation($reservation['id']);
+        }        
 
         require __DIR__ . '/../views/compte.php';
     }
