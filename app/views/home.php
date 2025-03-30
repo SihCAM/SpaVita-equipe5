@@ -167,6 +167,12 @@ include '../app/views/header.php';
 </section>
 
 <!--SECTION PRATIICENS-->
+
+<div class="heading">
+        <h1>Rencontrez</h1>
+        <h2 class="section-title">Nos Praticiens</h2>
+    <p class="section-subtitle">Des praticiens passionnés et hautement qualifiés, dédiés à votre bien être...</p>
+</div>
 <div class="praticiens-grid">
 
     <div class="praticien-card">
@@ -354,51 +360,6 @@ include '../app/views/header.php';
         
  
  </div>
-
-<!--Section Contact-->
-<section class="contact" id="contact">
-   <div class="container">
-        <div class="section-header">
-            <h2>Contactez-nous</h2>
-            <p>Pour toute question ou pour réserver, n'hesitez pas à nous contacter.</p>
-        </div>
-    <div class="contact-container">
-        <div class="contact-info">
-            <div class="info-item">
-                <!--<i class="fas fa-map"></i>-->
-                <h3>Adresse</h3>
-                <p> 15 avenue du lac <br> 74000 Annecy</p>
-            </div>
-            <div class="info-item">
-                <h3>Horaires</h3>
-                <p>Lundi - Vendredi : 10h00 -20h00<br>Samedi: 9h00 - 21h00<br>Dimanche: 10h00 - 21h00</p>
-            </div>
-            <div class="info-item">
-                <h3>Contact</h3>
-                <p> Téléphone: 04 23 45 67 89<br> Email: contact@spavita.fr</p>
-            </div>
-        </div>
-        <div class="contact-form">
-            <form action="/contact" method="POST">
-                <div class="form-group">
-                    <input type="text" id="name" name="name" placeholder="Votre nom" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" id="email" name="email" placeholder="Votre email" required>
-                </div>
-                <div class="form-group">
-                    <input type="tel" id="phone" name="phone" placeholder="Votre téléphone">
-                </div>
-                <div class="form-group">
-                    <textarea name="message" id="message" placeholder="Votre message" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Envoyer</button>
-            </form>
-        </div>
-    </div>
-   </div>
-</div>
-</section>
 
 <?php include '../app/views/footer.php'; ?>
 
