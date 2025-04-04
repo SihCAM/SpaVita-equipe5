@@ -57,36 +57,43 @@ class ReservationController {
                         <meta charset='UTF-8'>
                         <style>
                             body {
-                                font-family: Arial, sans-serif;
-                                background-color: #f9f9f9;
+                                font-family: 'Lato', sans-serif;
+                                background-color: #F2F4F3; /* Fond clair SpaVita */
                                 margin: 0;
                                 padding: 0;
                             }
+
                             .container {
                                 background-color: #fff;
-                                border-radius: 10px;
+                                border-radius: 4px;
                                 max-width: 600px;
                                 margin: 40px auto;
                                 padding: 30px;
-                                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); /* Ombre douce */
                             }
+
                             .header {
                                 text-align: center;
-                                color: #A476FF;
+                                color: #5E503F; /* Couleur secondaire SpaVita */
+                                font-family: 'Playfair Display', serif;
                             }
+
                             .title {
                                 font-size: 26px;
                                 margin-bottom: 20px;
+                                font-family: 'Playfair Display', serif;
                             }
+
                             .details {
                                 font-size: 16px;
-                                color: #333;
+                                color: #22333B; /* Texte principal sombre */
                                 margin-bottom: 15px;
                             }
+
                             .footer {
                                 margin-top: 30px;
                                 font-size: 13px;
-                                color: #888;
+                                color: #CCCCCC;
                                 text-align: center;
                             }
                         </style>
