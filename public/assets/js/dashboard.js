@@ -91,7 +91,7 @@ Promise.all([
                 scales: {
                     y: {
                         beginAtZero: true,
-                        suggestedMax: 100,
+                        suggestedMax: 50,
                         ticks: { stepSize: 5}
                     }
                 },

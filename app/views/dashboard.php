@@ -176,7 +176,7 @@ include '../app/views/header.php';
 
         <!--Planning des praticiens-->
         <div class="schedule-section">
-            <h2>Plannng des praticiens</h2>
+            <h2>Planning des praticiens</h2>
             <div class="schedule-container">
                 <div class="schedule-header">
                     <!--<div class="schedule-time-header"></div>-->
