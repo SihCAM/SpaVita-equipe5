@@ -47,6 +47,7 @@ $base = (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false) ? '/SpaVita-equip
   <!-- CSS -->
   <link rel="stylesheet" href="<?= $base ?>assets/css/style.css">
   <link rel="stylesheet" href="<?= $base ?>assets/css/custom.css">
+  <link rel="stylesheet" href="<?= $base ?>assets/css/dashboard.css">
   <link rel="stylesheet" href="<?= $base ?>assets/librairies/jquery-ui/jquery-ui.min.css">
 
   <!-- Font Awesome -->
@@ -55,7 +56,10 @@ $base = (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false) ? '/SpaVita-equip
   <!-- JS -->
   <script src="<?= $base ?>assets/librairies/jquery/jquery.min.js"></script>
   <script src="<?= $base ?>assets/librairies/jquery-ui/jquery-ui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script defer src="<?= $base ?>assets/js/main.js"></script>
+  <script defer src="<?= $base ?>assets/js/dashboard.js"></script>
+
 </head>
 <body>
 
@@ -75,6 +79,11 @@ $base = (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false) ? '/SpaVita-equip
                     <li><a href="index.php?page=soins">Nos Soins</a></li>
                     <li><a href="index.php?page=reservations">Réservations</a></li>
                     <li><a href="index.php?page=contact">Contact</a></li>
+                    <!--Condition pour afficher le menu dashboard uniquement aux employés et admins-->
+                    <?php if (isset($_SESSION['user']) && in_array($_SESSION ['user']['role'], ['admin','employe'])): ?>
+                        <li><a href="index.php?page=dashboard">Dashboard</a></li>
+                    <?php endif; ?>
+
                 </ul>
             </div>
 

@@ -139,4 +139,7 @@ RewriteCond %{REQUEST_URI} !^/SpaVita/public/
 RewriteRule ^(.*)$ public/$1 [L]
 
 ```
+
+
+### Password Clients-fictifs (deja hashé) : motdepasse123
 © 2025 SpaVita - Tous droits réservés

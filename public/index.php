@@ -1,9 +1,8 @@
 <?php
-session_start();
+require_once __DIR__ . '/../config/init.php';
+// 👇 Juste pour test rapide en local
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+  
 
 // Inclusion des contrôleurs
 require_once '../app/controllers/SoinController.php';
@@ -55,14 +54,39 @@ switch ($page) {
         require '../app/views/contact.php';
         break;
 
-    default:
-        echo "Page introuvable";
-        break;
 
     case 'compte':
         require_once '../app/controllers/CompteController.php';
         $controller = new CompteController();
         $controller->afficherCompte();
+        break;
+
+        // Pages en lien avec le dashboard
+
+    case 'dashboard':
+        require_once '../app/controllers/DashboardController.php';
+        $controller = new DashboardController();
+        $controller->afficherDashboard();
+        break;
+
+
+        case 'employe':
+            require_once '../app/controllers/UserController.php';
+        $controller = new UserController();
+        $controller->ajouterEmploye();    
+            break;
+        
+
+
+
+
+        case '403':
+            require_once '../app/views/403.php';
+            break;
+
+
+        default:
+        echo "Page introuvable";
         break;
         
 }

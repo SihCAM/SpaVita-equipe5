@@ -345,7 +345,7 @@ include '../app/views/header.php';
             <img src="assets/images/praticiens/praticien10.jpg" alt ="dixième praticien">
         </div>
         <div class="praticien-info">
-            <h3>Isabelle Chardon</h3>
+            <h3>Marc Chardon</h3>
             <span class="praticien-title">Naturopathe & coach bien -être</span>
             <p>Accompagnement global avec plantes, nutrition et soins de relaxation naturelle.</p>
             <div class="praticien-skills">
@@ -354,7 +354,7 @@ include '../app/views/header.php';
             </div>
         </div>
         <div class="praticien-overlay">
-            <p>Originaire de la région d'Annecy, Isabelle valorise les produits locaux et accompagne chaque client versun équilibre  durable.</p>
+            <p>Originaire de la région d'Annecy, Marc valorise les produits locaux et accompagne chaque client versun équilibre  durable.</p>
         </div>
     </div>
         
